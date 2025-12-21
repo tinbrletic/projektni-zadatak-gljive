@@ -512,16 +512,19 @@ def log_classifier_configuration(classifiers):
         else:
             print(f"  Feature selector: Integrated in pipeline")
 
-def calculate_metrics(y_true, y_pred, y_proba):
+def calculate_metrics(y_true, y_pred, y_proba, pos_label='p'):
+    y_true_bin = (np.asarray(y_true) == pos_label).astype(int)
+
     return {
         'Accuracy': accuracy_score(y_true, y_pred),
-        'F1': f1_score(y_true, y_pred),
-        'AUC-ROC': roc_auc_score(y_true, y_proba),
-        'Precision': precision_score(y_true, y_pred),
-        'Recall': recall_score(y_true, y_pred),
+        'F1': f1_score(y_true, y_pred, average='binary', pos_label=pos_label),
+        'AUC-ROC': roc_auc_score(y_true_bin, y_proba),
+        'Precision': precision_score(y_true, y_pred, average='binary', pos_label=pos_label),
+        'Recall': recall_score(y_true, y_pred, average='binary', pos_label=pos_label),
         'MCC': matthews_corrcoef(y_true, y_pred),
-        'Confusion_Matrix': confusion_matrix(y_true, y_pred)
+        'Confusion_Matrix': confusion_matrix(y_true, y_pred, labels=['e', 'p'])
     }
+
 
 # --- Multiple testing correction helpers ---
 def p_adjust(pvals, method='holm'):
@@ -663,241 +666,146 @@ def run_statistical_evaluation(all_results, metric_name='AUC-ROC', alpha=0.05, p
     for m, v in best_by_mean.items():
         print(f"  {m:40} {v:.4f}")
 
-def statistical_feature_selection(X, y, method='mann_whitney', top_k=10, alpha=0.05, adjust='bh', es_min=0.10):
+def statistical_feature_selection(
+    X, y,
+    method='mann_whitney',
+    top_k=10,
+    alpha=0.05,
+    adjust='bh',
+    es_min=0.10
+):
     """
-    Perform statistical feature selection using various statistical tests
-    
-    Parameters:
-    X (pd.DataFrame): Feature matrix
-    y (pd.Series): Binary target variable
-    method (str): 'mann_whitney', 'wilcoxon', 'kruskal', 'chi2', or 'ks_2samp'
-    top_k (int): Number of top features to select
-    alpha (float): Significance level
-    
-    Returns:
-    tuple: (selected_features, results_dict)
+    method:
+      - 'mann_whitney'  (independent samples)
+      - 'rank_sum'      (alias for Mann–Whitney, clearer name)
+      - 'wilcoxon'      (treated as rank_sum to keep backward compatibility)
+      - 'kruskal'
+      - 'chi2'
+      - 'ks_2samp' / 'ks2samp'
     """
-    
+
     print(f"Performing {method} statistical feature selection...")
-    
+
+    # Defensive conversions + index alignment
+    if not isinstance(X, pd.DataFrame):
+        X = pd.DataFrame(X)
+    y = pd.Series(y, index=X.index)
+
     if len(np.unique(y)) != 2:
         raise ValueError("Statistical tests require binary classification")
-    
+
+    # If categorical -> one-hot encode so tests work on numeric data
+    if any(dt == "object" for dt in X.dtypes.astype(str)) or any("category" in str(dt) for dt in X.dtypes):
+        X = pd.get_dummies(X, drop_first=False)
+
+    # Normalize method name / aliases
+    m = method.lower()
+    if m in ("wilcoxon", "rank_sum", "ranksum", "wilcoxon_rank_sum"):
+        m = "mann_whitney"
+    if m == "ks2samp":
+        m = "ks_2samp"
+
     results = {}
-    unique_classes = np.unique(y)
-    
-    if method == 'mann_whitney':
-        # Mann-Whitney U test - better for independent samples
-        class_0_indices = y[y == unique_classes[0]].index
-        class_1_indices = y[y == unique_classes[1]].index
-        
+    classes = np.unique(y)
+    idx0 = y[y == classes[0]].index
+    idx1 = y[y == classes[1]].index
+
+    if m == "mann_whitney":
         for feature in X.columns:
-            values_0 = X.loc[class_0_indices, feature].values
-            values_1 = X.loc[class_1_indices, feature].values
-            
+            v0 = X.loc[idx0, feature].to_numpy()
+            v1 = X.loc[idx1, feature].to_numpy()
             try:
-                statistic, p_value = mannwhitneyu(values_0, values_1, alternative='two-sided')
-                
-                # Calculate effect size (rank-biserial correlation)
-                n1, n2 = len(values_0), len(values_1)
-                effect_size = 1 - (2 * statistic) / (n1 * n2)
-                
-                results[feature] = {
-                    'p_value': p_value,
-                    'statistic': statistic,
-                    'significant': p_value < alpha,
-                    'effect_size': abs(effect_size)
-                }
-            except:
-                results[feature] = {'p_value': 1.0, 'statistic': 0, 'significant': False, 'effect_size': 0}
-    
-    elif method == 'wilcoxon':
-        # Wilcoxon signed rank test - adapted for independent samples
-        class_0_indices = y[y == unique_classes[0]].index
-        class_1_indices = y[y == unique_classes[1]].index
-        
-        for feature in X.columns:
-            values_0 = X.loc[class_0_indices, feature].values
-            values_1 = X.loc[class_1_indices, feature].values
-            
-            # Create paired samples by taking equal sample sizes
-            min_size = min(len(values_0), len(values_1))
-            
-            if min_size < 6:  # Need minimum samples for Wilcoxon test
-                results[feature] = {'p_value': 1.0, 'statistic': 0, 'significant': False, 'effect_size': 0}
-                continue
-            
-            # Random sampling to create pairs (reproducible)
-            np.random.seed(42)
-            if len(values_0) > min_size:
-                idx = np.random.choice(len(values_0), min_size, replace=False)
-                values_0 = values_0[idx]
-            if len(values_1) > min_size:
-                idx = np.random.choice(len(values_1), min_size, replace=False)
-                values_1 = values_1[idx]
-            
-            # Calculate differences
-            differences = values_1 - values_0
-            differences = differences[differences != 0]
-            
-            if len(differences) == 0:
-                results[feature] = {'p_value': 1.0, 'statistic': 0, 'significant': False, 'effect_size': 0}
-                continue
-            
-            try:
-                statistic, p_value = wilcoxon(differences, alternative='two-sided')
-                effect_size = np.abs(np.median(differences))
-                
-                results[feature] = {
-                    'p_value': p_value,
-                    'statistic': statistic,
-                    'significant': p_value < alpha,
-                    'effect_size': effect_size
-                }
-            except:
-                results[feature] = {'p_value': 1.0, 'statistic': 0, 'significant': False, 'effect_size': 0}
-    
-    elif method == 'kruskal':
-        # Kruskal-Wallis H test - non-parametric version of ANOVA
-        class_0_indices = y[y == unique_classes[0]].index
-        class_1_indices = y[y == unique_classes[1]].index
-        
-        for feature in X.columns:
-            values_0 = X.loc[class_0_indices, feature].values
-            values_1 = X.loc[class_1_indices, feature].values
-            
-            try:
-                statistic, p_value = kruskal(values_0, values_1)
-                
-                # Calculate effect size (eta-squared approximation)
-                n_total = len(values_0) + len(values_1)
-                effect_size = (statistic - 1) / (n_total - 1)
-                
-                results[feature] = {
-                    'p_value': p_value,
-                    'statistic': statistic,
-                    'significant': p_value < alpha,
-                    'effect_size': abs(effect_size)
-                }
-            except:
-                results[feature] = {'p_value': 1.0, 'statistic': 0, 'significant': False, 'effect_size': 0}
-    
-    elif method == 'chi2':
-        # Chi-square test for categorical features (discretized continuous features)
-        for feature in X.columns:
-            try:
-                # Discretize continuous features into bins (quartiles)
-                feature_values = X[feature].values
-                quartiles = np.percentile(feature_values, [25, 50, 75])
-                discretized = np.digitize(feature_values, quartiles)
-
-                # Create contingency table and ensure both target classes are present as columns
-                contingency_table = pd.crosstab(discretized, y)
-                contingency_table = contingency_table.reindex(columns=unique_classes, fill_value=0)
-
-                # If low expected counts, fallback to median split (2 bins)
-                if contingency_table.min().min() < 5:
-                    median_val = np.median(feature_values)
-                    discretized = (feature_values > median_val).astype(int)
-                    contingency_table = pd.crosstab(discretized, y)
-                    contingency_table = contingency_table.reindex(columns=unique_classes, fill_value=0)
-
-                # Require at least a 2x2 table with no empty cells
-                r, c = contingency_table.shape
-                if r >= 2 and c >= 2 and contingency_table.min().min() >= 1:
-                    chi2_stat, p_value, dof, expected = chi2_contingency(contingency_table)
-
-                    # Calculate effect size (Cramér's V) safely
-                    n = contingency_table.to_numpy().sum()
-                    denom = n * (min(r, c) - 1)
-                    if denom > 0:
-                        effect_size = float(np.sqrt(chi2_stat / denom))
-                    else:
-                        effect_size = 0.0
-
-                    results[feature] = {
-                        'p_value': float(p_value) if np.isfinite(p_value) else 1.0,
-                        'statistic': float(chi2_stat) if np.isfinite(chi2_stat) else 0.0,
-                        'significant': np.isfinite(p_value) and (p_value < alpha),
-                        'effect_size': float(effect_size)
-                    }
-                else:
-                    # Not enough structure to run a valid chi-square
-                    results[feature] = {'p_value': 1.0, 'statistic': 0.0, 'significant': False, 'effect_size': 0.0}
-
+                stat, p = mannwhitneyu(v0, v1, alternative="two-sided")
+                n1, n2 = len(v0), len(v1)
+                # rank-biserial correlation
+                es = 1 - (2 * stat) / (n1 * n2) if n1 and n2 else 0.0
+                results[feature] = {"p_value": float(p), "statistic": float(stat), "effect_size": float(abs(es))}
             except Exception:
-                results[feature] = {'p_value': 1.0, 'statistic': 0.0, 'significant': False, 'effect_size': 0.0}
-    
-    elif method == 'ks_2samp':
-        # Kolmogorov-Smirnov two-sample test
-        class_0_indices = y[y == unique_classes[0]].index
-        class_1_indices = y[y == unique_classes[1]].index
-        
+                results[feature] = {"p_value": 1.0, "statistic": 0.0, "effect_size": 0.0}
+
+    elif m == "kruskal":
         for feature in X.columns:
-            values_0 = X.loc[class_0_indices, feature].values
-            values_1 = X.loc[class_1_indices, feature].values
-            
-            # Clean NaNs/Infs to ensure valid inputs
-            values_0 = values_0[np.isfinite(values_0)]
-            values_1 = values_1[np.isfinite(values_1)]
-            
-            # Require minimum samples in both groups
-            if len(values_0) < 2 or len(values_1) < 2:
-                results[feature] = {'p_value': 1.0, 'statistic': 0, 'significant': False, 'effect_size': 0}
-                continue
-            
+            v0 = X.loc[idx0, feature].to_numpy()
+            v1 = X.loc[idx1, feature].to_numpy()
             try:
-                # Explicitly use asymptotic method to avoid exact method warnings with ties/large n
-                statistic, p_value = ks_2samp(values_0, values_1, alternative='two-sided', method='asymp')
-                
-                # KS statistic is already a measure of effect size (max difference between CDFs)
-                effect_size = statistic
-                
+                stat, p = kruskal(v0, v1)
+                n_total = len(v0) + len(v1)
+                es = (stat - 1) / (n_total - 1) if n_total > 1 else 0.0
+                results[feature] = {"p_value": float(p), "statistic": float(stat), "effect_size": float(abs(es))}
+            except Exception:
+                results[feature] = {"p_value": 1.0, "statistic": 0.0, "effect_size": 0.0}
+
+    elif m == "chi2":
+        # Works well for one-hot or low-cardinality discrete numeric
+        for feature in X.columns:
+            try:
+                cont = pd.crosstab(X[feature], y).reindex(columns=classes, fill_value=0)
+                r, c = cont.shape
+                if r < 2 or c < 2 or cont.to_numpy().min() == 0:
+                    results[feature] = {"p_value": 1.0, "statistic": 0.0, "effect_size": 0.0}
+                    continue
+
+                chi2_stat, p, dof, expected = chi2_contingency(cont)
+
+                n = cont.to_numpy().sum()
+                denom = n * (min(r, c) - 1)
+                cramers_v = float(np.sqrt(chi2_stat / denom)) if denom > 0 else 0.0
+
                 results[feature] = {
-                    'p_value': p_value,
-                    'statistic': statistic,
-                    'significant': p_value < alpha,
-                    'effect_size': effect_size
+                    "p_value": float(p) if np.isfinite(p) else 1.0,
+                    "statistic": float(chi2_stat) if np.isfinite(chi2_stat) else 0.0,
+                    "effect_size": cramers_v
                 }
-            except:
-                results[feature] = {'p_value': 1.0, 'statistic': 0, 'significant': False, 'effect_size': 0}
-    
-    # Apply p-adjust and effect-size filtering
-    pvals = np.array([d.get('p_value', 1.0) for d in results.values()], dtype=float)
+            except Exception:
+                results[feature] = {"p_value": 1.0, "statistic": 0.0, "effect_size": 0.0}
+
+    elif m == "ks_2samp":
+        for feature in X.columns:
+            v0 = X.loc[idx0, feature].to_numpy(dtype=float)
+            v1 = X.loc[idx1, feature].to_numpy(dtype=float)
+            if len(v0) < 2 or len(v1) < 2:
+                results[feature] = {"p_value": 1.0, "statistic": 0.0, "effect_size": 0.0}
+                continue
+            try:
+                stat, p = ks_2samp(v0, v1, alternative="two-sided", method="asymp")
+                results[feature] = {"p_value": float(p), "statistic": float(stat), "effect_size": float(stat)}
+            except Exception:
+                results[feature] = {"p_value": 1.0, "statistic": 0.0, "effect_size": 0.0}
+
+    else:
+        raise ValueError(f"Unknown method: {method}")
+
+    # p-adjust
+    pvals = np.array([d.get("p_value", 1.0) for d in results.values()], dtype=float)
     if pvals.size:
         adj = p_adjust(pvals, method=adjust)
         for (feat, d), p_adj in zip(results.items(), adj):
-            d['p_adj'] = float(p_adj)
+            d["p_adj"] = float(p_adj)
     else:
         for d in results.values():
-            d['p_adj'] = 1.0
+            d["p_adj"] = 1.0
 
-    def _passes_effect(d, method_name):
-        es = abs(d.get('effect_size', 0.0))
-        if method_name in ('mann_whitney', 'wilcoxon', 'kruskal', 'ks_2samp'):
-            return es >= es_min
-        if method_name == 'chi2':
-            return es >= es_min
-        return True
-
-    filtered = [(f, d.get('p_adj', 1.0), d.get('effect_size', 0.0))
-                for f, d in results.items()
-                if d.get('p_adj', 1.0) < alpha and _passes_effect(d, method)]
+    # filter
+    filtered = [
+        (f, d.get("p_adj", 1.0), d.get("effect_size", 0.0))
+        for f, d in results.items()
+        if d.get("p_adj", 1.0) < alpha and abs(d.get("effect_size", 0.0)) >= es_min
+    ]
     filtered.sort(key=lambda x: (x[1], -abs(x[2])))
     selected_features = [f for f, _, _ in filtered[:top_k]]
 
-    # Log results with p-adjust
-    all_p = np.array([v['p_value'] for v in results.values() if 'p_value' in v], dtype=float)
-    all_padj = np.array([v.get('p_adj', 1.0) for v in results.values()], dtype=float)
+    # logging
+    all_p = np.array([v.get("p_value", 1.0) for v in results.values()], dtype=float)
+    all_padj = np.array([v.get("p_adj", 1.0) for v in results.values()], dtype=float)
     if all_p.size:
         print(f"  Significant features found (raw): {(all_p < alpha).sum()}/{len(all_p)}")
         print(f"  Significant features found (adj): {(all_padj < alpha).sum()}/{len(all_padj)}")
         print(f"  Min raw p: {fmt_p(np.min(all_p))}, median p: {fmt_p(np.median(all_p))}")
         print(f"  Min p_adj: {fmt_p(np.min(all_padj))}, median p_adj: {fmt_p(np.median(all_padj))}")
     print(f"  Selected top {len(selected_features)} features")
-    if len(selected_features) > 0:
+    if selected_features:
         print(f"  Top 3 features: {', '.join(selected_features[:3])}")
-    
+
     return selected_features, results
 
 # Log configuration and load data
@@ -908,6 +816,7 @@ if data is None:
 # Load and prepare data with logging
 columns_to_drop = ["class"]
 X, y = log_preprocessing_info(data, columns_to_drop)
+X = pd.get_dummies(X, drop_first=False)
 
 # STATISTICAL FEATURE SELECTION
 print()
@@ -915,15 +824,15 @@ print("STATISTICAL FEATURE SELECTION:")
 print("-" * 50)
 
 # Perform all statistical tests feature selection
-mann_whitney_features, mw_results = cached_stat_select(X, y, 'mann_whitney', 15, 0.05, 'bh', 0.10, False, 0.95)
-wilcoxon_features, w_results = cached_stat_select(X, y, 'wilcoxon', 15, 0.05, 'bh', 0.10, False, 0.95)
-kruskal_features,  k_results = cached_stat_select(X, y, 'kruskal', 15, 0.05, 'bh', 0.10, False, 0.95)
-chi2_features,     chi_results = cached_stat_select(X, y, 'chi2', 15, 0.05, 'bh', 0.10, False, 0.95)
-ks_features,       ks_results  = cached_stat_select(X, y, 'ks_2samp', 15, 0.05, 'bh', 0.10, False, 0.95)
+mann_whitney_features, mw_results = cached_stat_select(X, y, 'mann_whitney', 5, 0.05, 'bh', 0.10, False, 0.95)
+rank_sum_features, w_results = cached_stat_select(X, y, 'rank_sum', 5, 0.05, 'bh', 0.10, False, 0.95)
+kruskal_features,  k_results = cached_stat_select(X, y, 'kruskal', 5, 0.05, 'bh', 0.10, False, 0.95)
+chi2_features,     chi_results = cached_stat_select(X, y, 'chi2', 5, 0.05, 'bh', 0.10, False, 0.95)
+ks_features,       ks_results  = cached_stat_select(X, y, 'ks_2samp', 5, 0.05, 'bh', 0.10, False, 0.95)
 
 print(f"\nStatistical Feature Selection Results:")
 print(f"Mann-Whitney selected: {len(mann_whitney_features)} features")
-print(f"Wilcoxon selected: {len(wilcoxon_features)} features")
+print(f"Rank-sum selected: {len(rank_sum_features)} features")
 print(f"Kruskal-Wallis selected: {len(kruskal_features)} features")
 print(f"Chi-square selected: {len(chi2_features)} features")
 print(f"Kolmogorov-Smirnov selected: {len(ks_features)} features")
@@ -935,8 +844,8 @@ for i, feature in enumerate(mann_whitney_features, 1):
     es = mw_results[feature].get('effect_size', 0.0)
     print(f"  {i:2d}. {feature:30} (p_adj={fmt_p(p_val)}, es={abs(es):.3f})")
 
-print(f"\nWILCOXON SELECTED FEATURES ({len(wilcoxon_features)}):")
-for i, feature in enumerate(wilcoxon_features, 1):
+print(f"\nRANK-SUM SELECTED FEATURES ({len(rank_sum_features)}):")
+for i, feature in enumerate(rank_sum_features, 1):
     p_val = w_results[feature].get('p_adj', w_results[feature].get('p_value', 1.0))
     es = w_results[feature].get('effect_size', 0.0)
     print(f"  {i:2d}. {feature:30} (p_adj={fmt_p(p_val)}, es={abs(es):.3f})")
@@ -960,7 +869,7 @@ for i, feature in enumerate(ks_features, 1):
     print(f"  {i:2d}. {feature:30} (p_adj={fmt_p(p_val)}, es={abs(es):.3f})")
 
 # Find common features between all statistical methods
-all_statistical_features = [mann_whitney_features, wilcoxon_features, kruskal_features, 
+all_statistical_features = [mann_whitney_features, rank_sum_features, kruskal_features, 
                            chi2_features, ks_features]
 common_all_methods = set(mann_whitney_features)
 for features in all_statistical_features[1:]:
@@ -970,13 +879,13 @@ print(f"Common features across all statistical methods: {len(common_all_methods)
 if len(common_all_methods) > 0:
     print(f"Common features: {list(common_all_methods)[:10]}")  # Show top 10
 
-# Find common features between traditional methods (Mann-Whitney + Wilcoxon)
-common_statistical_features = list(set(mann_whitney_features) & set(wilcoxon_features))
-print(f"Common features between Mann-Whitney and Wilcoxon: {len(common_statistical_features)}")
+# Find common features between traditional methods (Mann-Whitney + Rank-sum)
+common_statistical_features = list(set(mann_whitney_features) & set(rank_sum_features))
+print(f"Common features between Mann-Whitney and Rank-sum: {len(common_statistical_features)}")
 
 # Overlap analysis between statistical methods
-feature_lists = [mann_whitney_features, wilcoxon_features, kruskal_features, chi2_features, ks_features]
-method_names = ['Mann-Whitney', 'Wilcoxon', 'Kruskal', 'Chi-square', 'KS']
+feature_lists = [mann_whitney_features, rank_sum_features, kruskal_features, chi2_features, ks_features]
+method_names = ['Mann-Whitney', 'Rank-sum', 'Kruskal', 'Chi-square', 'KS']
 overlap_df = analyze_feature_overlap(feature_lists, method_names)
 
 # Prepare features summary data (will append integrated later)
@@ -1401,7 +1310,7 @@ classifiers = {
 }
 
 # Configure cross-validation
-kf = RepeatedStratifiedKFold(n_splits=10, n_repeats=10, random_state=42)
+kf = RepeatedStratifiedKFold(n_splits=10, n_repeats=5, random_state=42)
 
 # Optional deterministic splits cache
 splits_file = os.path.join(CACHE_DIR, f"splits_{kf.cvargs['n_splits']}x{kf.n_repeats}_seed{kf.random_state}.npz")
@@ -1497,11 +1406,15 @@ else:
                 model_fitted = model.fit(X_train, y_train)
                 y_pred = model_fitted.predict(X_test)
                 if hasattr(model_fitted, 'predict_proba'):
-                    y_proba = model_fitted.predict_proba(X_test)[:, 1]
+                    proba = model_fitted.predict_proba(X_test)
+                    classes = list(model_fitted.classes_)
+                    pos_idx = classes.index('p')
+                    y_proba = proba[:, pos_idx]
                 elif hasattr(model_fitted, 'decision_function'):
                     y_proba = model_fitted.decision_function(X_test)
                 else:
-                    y_proba = (y_pred == 1).astype(float)
+                    y_proba = (y_pred == 'p').astype(float)
+
 
                 # Save out-of-fold predictions for current test index
                 y_oof[test_idx] = y_proba
@@ -1546,11 +1459,15 @@ else:
                 model_fitted = model.fit(X_train_selected, y_train)
                 y_pred = model_fitted.predict(X_test_selected)
                 if hasattr(model_fitted, 'predict_proba'):
-                    y_proba = model_fitted.predict_proba(X_test_selected)[:, 1]
+                    proba = model_fitted.predict_proba(X_test_selected)
+                    classes = list(model_fitted.classes_)
+                    pos_idx = classes.index('p')
+                    y_proba = proba[:, pos_idx]
                 elif hasattr(model_fitted, 'decision_function'):
                     y_proba = model_fitted.decision_function(X_test_selected)
                 else:
-                    y_proba = (y_pred == 1).astype(float)
+                    y_proba = (y_pred == 'p').astype(float)
+
 
                 # Save out-of-fold predictions for current test index
                 y_oof[test_idx] = y_proba
@@ -1633,8 +1550,10 @@ else:
         # OOF ROC and AUC for this model
         mask = ~np.isnan(y_oof)
         if mask.sum() > 0 and np.unique(y.values[mask]).size == 2:
-            fpr, tpr, thresholds = roc_curve(y.values[mask], y_oof[mask])
+            y_true_oof = (y.values[mask] == 'p').astype(int)
+            fpr, tpr, thresholds = roc_curve(y_true_oof, y_oof[mask])
             roc_auc_val = auc(fpr, tpr)
+
         else:
             fpr, tpr, roc_auc_val = np.array([0.0, 1.0]), np.array([0.0, 1.0]), float('nan')
 
