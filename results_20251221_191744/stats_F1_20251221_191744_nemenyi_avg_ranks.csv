@@ -1,0 +1,47 @@
+,avg_rank
+Random Forest (All),4.92
+Integrated-SelectFromModel (RF selector) + LR,4.92
+Integrated-SelectFromModel (RF selector) + RF,4.92
+Integrated-SelectFromModel (L1-LR selector) + LR,4.92
+Integrated-RFECV (L1-LR) + LR,6.5
+Logistic Regression (All),6.71
+Decision Tree (All),8.11
+Integrated-RFECV (L1-LR) + KNN,8.27
+Integrated-SelectFromModel (L1-LR selector) + SVM,8.29
+SVM (All),8.29
+Integrated-SelectFromModel (RF selector) + KNN,8.49
+Integrated-SelectFromModel (L1-LR selector) + KNN,8.49
+K-Neighbors (All),8.49
+Integrated-RFECV (L1-LR) + Naive Bayes,15.86
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,18.01
+Naive Bayes (All),18.01
+Decision Tree (Chi-square - inCV),23.69
+SVM (Chi-square - inCV),23.69
+Logistic Regression (Chi-square - inCV),23.69
+Random Forest (Chi-square - inCV),23.69
+SVM (Kruskal - inCV),24.56
+Decision Tree (Kruskal - inCV),24.56
+Random Forest (Kruskal - inCV),24.56
+K-Neighbors (Kruskal - inCV),25.17
+K-Neighbors (Chi-square - inCV),25.26
+Logistic Regression (Kruskal - inCV),28.96
+Naive Bayes (Chi-square - inCV),30.22
+K-Neighbors (Wilcoxon - inCV),30.45
+Random Forest (MW - inCV),30.45
+K-Neighbors (MW - inCV),30.45
+SVM (KS - inCV),30.45
+Random Forest (KS - inCV),30.45
+SVM (Wilcoxon - inCV),30.45
+SVM (MW - inCV),30.45
+Random Forest (Wilcoxon - inCV),30.45
+Decision Tree (Wilcoxon - inCV),30.45
+K-Neighbors (KS - inCV),30.45
+Decision Tree (KS - inCV),30.45
+Decision Tree (MW - inCV),30.45
+Logistic Regression (KS - inCV),38.87
+Logistic Regression (Wilcoxon - inCV),38.87
+Logistic Regression (MW - inCV),38.87
+Naive Bayes (Kruskal - inCV),44.33
+Naive Bayes (MW - inCV),44.47
+Naive Bayes (Wilcoxon - inCV),44.47
+Naive Bayes (KS - inCV),44.47
