@@ -903,7 +903,7 @@ for method, features in zip(method_names, feature_lists):
 all_features = X.columns.tolist()
 
 # Define classifiers including baseline (All) and statistical-selection variants
-TOP_K = 15  # Number of top features to select for statistical methods
+TOP_K = 5  # Number of top features to select for statistical methods
 classifiers = {
     # Baseline (All features)
     "Random Forest (All)": {
