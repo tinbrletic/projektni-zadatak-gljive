@@ -1367,7 +1367,7 @@ all_classifier_results = {}
 
 # Run-level cache gate
 no_cache = os.environ.get("NO_CACHE", "0") == "1" or "--no-cache" in sys.argv
-run_id = make_run_id(dataset_file, classifiers, kf, extra={"stat_select": {"top_k": 15, "alpha": 0.05, "adjust": "bh", "es_min": 0.10}})
+run_id = make_run_id(dataset_file, classifiers, kf, extra={"stat_select": {"top_k": 5, "alpha": 0.05, "adjust": "bh", "es_min": 0.10}})
 res_pkl, feat_pkl, oof_npz = cache_paths(run_id)
 
 feature_summary_pkl = os.path.join(CACHE_DIR, f"features_summary_{run_id}.pkl")
