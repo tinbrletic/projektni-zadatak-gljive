@@ -1,0 +1,1049 @@
+Selection_Method,Feature_Name,Rank,Selection_Type
+Mann-Whitney,odor_n,1,Statistical
+Mann-Whitney,odor_f,2,Statistical
+Mann-Whitney,ring-type_p,3,Statistical
+Mann-Whitney,stalk-surface-above-ring_k,4,Statistical
+Mann-Whitney,stalk-surface-below-ring_k,5,Statistical
+Rank-sum,odor_n,1,Statistical
+Rank-sum,odor_f,2,Statistical
+Rank-sum,ring-type_p,3,Statistical
+Rank-sum,stalk-surface-above-ring_k,4,Statistical
+Rank-sum,stalk-surface-below-ring_k,5,Statistical
+Kruskal,odor_n,1,Statistical
+Kruskal,odor_f,2,Statistical
+Kruskal,stalk-surface-above-ring_k,3,Statistical
+Kruskal,stalk-surface-below-ring_k,4,Statistical
+Kruskal,ring-type_p,5,Statistical
+Chi-square,odor_n,1,Statistical
+Chi-square,stalk-surface-above-ring_k,2,Statistical
+Chi-square,stalk-surface-below-ring_k,3,Statistical
+Chi-square,ring-type_p,4,Statistical
+Chi-square,gill-size_b,5,Statistical
+KS,odor_n,1,Statistical
+KS,odor_f,2,Statistical
+KS,ring-type_p,3,Statistical
+KS,stalk-surface-above-ring_k,4,Statistical
+KS,stalk-surface-below-ring_k,5,Statistical
+Integrated-SelectFromModel (L1-LR selector) + LR,bruises_f,1,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,bruises_t,2,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-color_b,3,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-color_c,4,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-color_e,5,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-color_g,6,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-color_n,7,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-color_p,8,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-color_r,9,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-color_u,10,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-color_w,11,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-color_y,12,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-shape_b,13,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-shape_c,14,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-shape_f,15,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-shape_k,16,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-shape_s,17,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-shape_x,18,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-surface_f,19,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-surface_g,20,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-surface_s,21,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,cap-surface_y,22,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-attachment_a,23,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-attachment_f,24,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_b,25,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_e,26,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_g,27,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_h,28,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_k,29,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_n,30,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_o,31,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_p,32,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_r,33,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_u,34,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_w,35,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-color_y,36,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-size_b,37,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-size_n,38,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-spacing_c,39,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,gill-spacing_w,40,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,habitat_d,41,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,habitat_g,42,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,habitat_l,43,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,habitat_m,44,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,habitat_p,45,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,habitat_u,46,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,habitat_w,47,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,odor_a,48,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,odor_c,49,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,odor_f,50,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,odor_l,51,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,odor_m,52,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,odor_n,53,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,odor_p,54,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,odor_s,55,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,odor_y,56,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,population_a,57,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,population_c,58,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,population_n,59,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,population_s,60,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,population_v,61,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,population_y,62,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,ring-number_n,63,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,ring-number_o,64,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,ring-number_t,65,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,ring-type_e,66,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,ring-type_f,67,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,ring-type_l,68,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,ring-type_n,69,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,ring-type_p,70,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,spore-print-color_b,71,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,spore-print-color_h,72,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,spore-print-color_k,73,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,spore-print-color_n,74,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,spore-print-color_o,75,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,spore-print-color_r,76,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,spore-print-color_u,77,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,spore-print-color_w,78,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,spore-print-color_y,79,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-above-ring_b,80,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-above-ring_c,81,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-above-ring_e,82,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-above-ring_g,83,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-above-ring_n,84,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-above-ring_o,85,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-above-ring_p,86,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-above-ring_w,87,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-above-ring_y,88,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-below-ring_b,89,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-below-ring_c,90,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-below-ring_e,91,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-below-ring_g,92,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-below-ring_n,93,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-below-ring_o,94,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-below-ring_p,95,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-below-ring_w,96,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-color-below-ring_y,97,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-root_?,98,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-root_b,99,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-root_c,100,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-root_e,101,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-root_r,102,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-shape_e,103,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-shape_t,104,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-surface-above-ring_f,105,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-surface-above-ring_k,106,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-surface-above-ring_s,107,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-surface-above-ring_y,108,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-surface-below-ring_f,109,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-surface-below-ring_k,110,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-surface-below-ring_s,111,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,stalk-surface-below-ring_y,112,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,veil-color_n,113,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,veil-color_o,114,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,veil-color_w,115,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,veil-color_y,116,Integrated
+Integrated-SelectFromModel (L1-LR selector) + LR,veil-type_p,117,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,bruises_f,1,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,bruises_t,2,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-color_b,3,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-color_c,4,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-color_e,5,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-color_g,6,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-color_n,7,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-color_p,8,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-color_r,9,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-color_u,10,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-color_w,11,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-color_y,12,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-shape_b,13,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-shape_c,14,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-shape_f,15,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-shape_k,16,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-shape_s,17,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-shape_x,18,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-surface_f,19,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-surface_g,20,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-surface_s,21,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,cap-surface_y,22,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-attachment_a,23,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-attachment_f,24,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_b,25,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_e,26,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_g,27,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_h,28,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_k,29,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_n,30,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_o,31,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_p,32,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_r,33,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_u,34,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_w,35,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-color_y,36,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-size_b,37,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-size_n,38,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-spacing_c,39,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,gill-spacing_w,40,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,habitat_d,41,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,habitat_g,42,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,habitat_l,43,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,habitat_m,44,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,habitat_p,45,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,habitat_u,46,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,habitat_w,47,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,odor_a,48,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,odor_c,49,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,odor_f,50,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,odor_l,51,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,odor_m,52,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,odor_n,53,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,odor_p,54,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,odor_s,55,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,odor_y,56,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,population_a,57,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,population_c,58,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,population_n,59,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,population_s,60,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,population_v,61,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,population_y,62,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,ring-number_n,63,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,ring-number_o,64,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,ring-number_t,65,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,ring-type_e,66,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,ring-type_f,67,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,ring-type_l,68,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,ring-type_n,69,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,ring-type_p,70,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,spore-print-color_b,71,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,spore-print-color_h,72,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,spore-print-color_k,73,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,spore-print-color_n,74,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,spore-print-color_o,75,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,spore-print-color_r,76,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,spore-print-color_u,77,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,spore-print-color_w,78,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,spore-print-color_y,79,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-above-ring_b,80,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-above-ring_c,81,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-above-ring_e,82,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-above-ring_g,83,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-above-ring_n,84,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-above-ring_o,85,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-above-ring_p,86,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-above-ring_w,87,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-above-ring_y,88,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-below-ring_b,89,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-below-ring_c,90,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-below-ring_e,91,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-below-ring_g,92,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-below-ring_n,93,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-below-ring_o,94,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-below-ring_p,95,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-below-ring_w,96,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-color-below-ring_y,97,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-root_?,98,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-root_b,99,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-root_c,100,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-root_e,101,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-root_r,102,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-shape_e,103,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-shape_t,104,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-surface-above-ring_f,105,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-surface-above-ring_k,106,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-surface-above-ring_s,107,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-surface-above-ring_y,108,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-surface-below-ring_f,109,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-surface-below-ring_k,110,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-surface-below-ring_s,111,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,stalk-surface-below-ring_y,112,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,veil-color_n,113,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,veil-color_o,114,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,veil-color_w,115,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,veil-color_y,116,Integrated
+Integrated-SelectFromModel (L1-LR selector) + SVM,veil-type_p,117,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,bruises_f,1,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,bruises_t,2,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-color_b,3,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-color_c,4,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-color_e,5,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-color_g,6,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-color_n,7,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-color_p,8,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-color_r,9,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-color_u,10,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-color_w,11,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-color_y,12,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-shape_b,13,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-shape_c,14,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-shape_f,15,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-shape_k,16,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-shape_s,17,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-shape_x,18,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-surface_f,19,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-surface_g,20,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-surface_s,21,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,cap-surface_y,22,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-attachment_a,23,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-attachment_f,24,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_b,25,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_e,26,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_g,27,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_h,28,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_k,29,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_n,30,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_o,31,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_p,32,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_r,33,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_u,34,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_w,35,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-color_y,36,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-size_b,37,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-size_n,38,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-spacing_c,39,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,gill-spacing_w,40,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,habitat_d,41,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,habitat_g,42,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,habitat_l,43,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,habitat_m,44,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,habitat_p,45,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,habitat_u,46,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,habitat_w,47,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,odor_a,48,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,odor_c,49,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,odor_f,50,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,odor_l,51,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,odor_m,52,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,odor_n,53,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,odor_p,54,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,odor_s,55,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,odor_y,56,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,population_a,57,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,population_c,58,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,population_n,59,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,population_s,60,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,population_v,61,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,population_y,62,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,ring-number_n,63,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,ring-number_o,64,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,ring-number_t,65,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,ring-type_e,66,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,ring-type_f,67,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,ring-type_l,68,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,ring-type_n,69,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,ring-type_p,70,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,spore-print-color_b,71,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,spore-print-color_h,72,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,spore-print-color_k,73,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,spore-print-color_n,74,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,spore-print-color_o,75,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,spore-print-color_r,76,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,spore-print-color_u,77,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,spore-print-color_w,78,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,spore-print-color_y,79,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-above-ring_b,80,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-above-ring_c,81,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-above-ring_e,82,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-above-ring_g,83,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-above-ring_n,84,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-above-ring_o,85,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-above-ring_p,86,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-above-ring_w,87,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-above-ring_y,88,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-below-ring_b,89,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-below-ring_c,90,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-below-ring_e,91,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-below-ring_g,92,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-below-ring_n,93,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-below-ring_o,94,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-below-ring_p,95,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-below-ring_w,96,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-color-below-ring_y,97,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-root_?,98,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-root_b,99,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-root_c,100,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-root_e,101,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-root_r,102,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-shape_e,103,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-shape_t,104,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-surface-above-ring_f,105,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-surface-above-ring_k,106,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-surface-above-ring_s,107,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-surface-above-ring_y,108,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-surface-below-ring_f,109,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-surface-below-ring_k,110,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-surface-below-ring_s,111,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,stalk-surface-below-ring_y,112,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,veil-color_n,113,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,veil-color_o,114,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,veil-color_w,115,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,veil-color_y,116,Integrated
+Integrated-SelectFromModel (L1-LR selector) + KNN,veil-type_p,117,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,bruises_f,1,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,bruises_t,2,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-color_b,3,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-color_c,4,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-color_e,5,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-color_g,6,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-color_n,7,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-color_p,8,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-color_r,9,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-color_u,10,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-color_w,11,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-color_y,12,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-shape_b,13,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-shape_c,14,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-shape_f,15,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-shape_k,16,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-shape_s,17,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-shape_x,18,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-surface_f,19,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-surface_g,20,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-surface_s,21,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,cap-surface_y,22,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-attachment_a,23,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-attachment_f,24,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_b,25,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_e,26,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_g,27,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_h,28,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_k,29,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_n,30,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_o,31,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_p,32,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_r,33,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_u,34,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_w,35,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-color_y,36,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-size_b,37,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-size_n,38,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-spacing_c,39,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,gill-spacing_w,40,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,habitat_d,41,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,habitat_g,42,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,habitat_l,43,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,habitat_m,44,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,habitat_p,45,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,habitat_u,46,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,habitat_w,47,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,odor_a,48,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,odor_c,49,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,odor_f,50,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,odor_l,51,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,odor_m,52,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,odor_n,53,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,odor_p,54,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,odor_s,55,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,odor_y,56,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,population_a,57,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,population_c,58,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,population_n,59,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,population_s,60,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,population_v,61,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,population_y,62,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,ring-number_n,63,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,ring-number_o,64,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,ring-number_t,65,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,ring-type_e,66,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,ring-type_f,67,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,ring-type_l,68,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,ring-type_n,69,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,ring-type_p,70,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,spore-print-color_b,71,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,spore-print-color_h,72,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,spore-print-color_k,73,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,spore-print-color_n,74,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,spore-print-color_o,75,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,spore-print-color_r,76,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,spore-print-color_u,77,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,spore-print-color_w,78,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,spore-print-color_y,79,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-above-ring_b,80,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-above-ring_c,81,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-above-ring_e,82,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-above-ring_g,83,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-above-ring_n,84,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-above-ring_o,85,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-above-ring_p,86,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-above-ring_w,87,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-above-ring_y,88,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-below-ring_b,89,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-below-ring_c,90,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-below-ring_e,91,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-below-ring_g,92,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-below-ring_n,93,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-below-ring_o,94,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-below-ring_p,95,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-below-ring_w,96,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-color-below-ring_y,97,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-root_?,98,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-root_b,99,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-root_c,100,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-root_e,101,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-root_r,102,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-shape_e,103,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-shape_t,104,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-surface-above-ring_f,105,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-surface-above-ring_k,106,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-surface-above-ring_s,107,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-surface-above-ring_y,108,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-surface-below-ring_f,109,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-surface-below-ring_k,110,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-surface-below-ring_s,111,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,stalk-surface-below-ring_y,112,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,veil-color_n,113,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,veil-color_o,114,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,veil-color_w,115,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,veil-color_y,116,Integrated
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes,veil-type_p,117,Integrated
+Integrated-SelectFromModel (RF selector) + RF,bruises_f,1,Integrated
+Integrated-SelectFromModel (RF selector) + RF,bruises_t,2,Integrated
+Integrated-SelectFromModel (RF selector) + RF,cap-color_b,3,Integrated
+Integrated-SelectFromModel (RF selector) + RF,cap-color_p,4,Integrated
+Integrated-SelectFromModel (RF selector) + RF,cap-color_w,5,Integrated
+Integrated-SelectFromModel (RF selector) + RF,cap-color_y,6,Integrated
+Integrated-SelectFromModel (RF selector) + RF,cap-shape_b,7,Integrated
+Integrated-SelectFromModel (RF selector) + RF,cap-surface_f,8,Integrated
+Integrated-SelectFromModel (RF selector) + RF,cap-surface_s,9,Integrated
+Integrated-SelectFromModel (RF selector) + RF,cap-surface_y,10,Integrated
+Integrated-SelectFromModel (RF selector) + RF,gill-color_b,11,Integrated
+Integrated-SelectFromModel (RF selector) + RF,gill-color_h,12,Integrated
+Integrated-SelectFromModel (RF selector) + RF,gill-color_n,13,Integrated
+Integrated-SelectFromModel (RF selector) + RF,gill-color_w,14,Integrated
+Integrated-SelectFromModel (RF selector) + RF,gill-size_b,15,Integrated
+Integrated-SelectFromModel (RF selector) + RF,gill-size_n,16,Integrated
+Integrated-SelectFromModel (RF selector) + RF,gill-spacing_c,17,Integrated
+Integrated-SelectFromModel (RF selector) + RF,gill-spacing_w,18,Integrated
+Integrated-SelectFromModel (RF selector) + RF,habitat_d,19,Integrated
+Integrated-SelectFromModel (RF selector) + RF,habitat_g,20,Integrated
+Integrated-SelectFromModel (RF selector) + RF,habitat_m,21,Integrated
+Integrated-SelectFromModel (RF selector) + RF,habitat_p,22,Integrated
+Integrated-SelectFromModel (RF selector) + RF,habitat_u,23,Integrated
+Integrated-SelectFromModel (RF selector) + RF,odor_a,24,Integrated
+Integrated-SelectFromModel (RF selector) + RF,odor_c,25,Integrated
+Integrated-SelectFromModel (RF selector) + RF,odor_f,26,Integrated
+Integrated-SelectFromModel (RF selector) + RF,odor_l,27,Integrated
+Integrated-SelectFromModel (RF selector) + RF,odor_n,28,Integrated
+Integrated-SelectFromModel (RF selector) + RF,odor_p,29,Integrated
+Integrated-SelectFromModel (RF selector) + RF,odor_s,30,Integrated
+Integrated-SelectFromModel (RF selector) + RF,odor_y,31,Integrated
+Integrated-SelectFromModel (RF selector) + RF,population_a,32,Integrated
+Integrated-SelectFromModel (RF selector) + RF,population_c,33,Integrated
+Integrated-SelectFromModel (RF selector) + RF,population_n,34,Integrated
+Integrated-SelectFromModel (RF selector) + RF,population_s,35,Integrated
+Integrated-SelectFromModel (RF selector) + RF,population_v,36,Integrated
+Integrated-SelectFromModel (RF selector) + RF,population_y,37,Integrated
+Integrated-SelectFromModel (RF selector) + RF,ring-number_o,38,Integrated
+Integrated-SelectFromModel (RF selector) + RF,ring-number_t,39,Integrated
+Integrated-SelectFromModel (RF selector) + RF,ring-type_e,40,Integrated
+Integrated-SelectFromModel (RF selector) + RF,ring-type_f,41,Integrated
+Integrated-SelectFromModel (RF selector) + RF,ring-type_l,42,Integrated
+Integrated-SelectFromModel (RF selector) + RF,ring-type_p,43,Integrated
+Integrated-SelectFromModel (RF selector) + RF,spore-print-color_h,44,Integrated
+Integrated-SelectFromModel (RF selector) + RF,spore-print-color_k,45,Integrated
+Integrated-SelectFromModel (RF selector) + RF,spore-print-color_n,46,Integrated
+Integrated-SelectFromModel (RF selector) + RF,spore-print-color_r,47,Integrated
+Integrated-SelectFromModel (RF selector) + RF,spore-print-color_w,48,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-color-above-ring_b,49,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-color-above-ring_n,50,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-color-above-ring_p,51,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-color-above-ring_w,52,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-color-below-ring_n,53,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-color-below-ring_w,54,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-root_?,55,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-root_b,56,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-root_c,57,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-root_e,58,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-root_r,59,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-shape_e,60,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-shape_t,61,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-surface-above-ring_f,62,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-surface-above-ring_k,63,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-surface-above-ring_s,64,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-surface-below-ring_f,65,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-surface-below-ring_k,66,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-surface-below-ring_s,67,Integrated
+Integrated-SelectFromModel (RF selector) + RF,stalk-surface-below-ring_y,68,Integrated
+Integrated-SelectFromModel (RF selector) + LR,bruises_f,1,Integrated
+Integrated-SelectFromModel (RF selector) + LR,bruises_t,2,Integrated
+Integrated-SelectFromModel (RF selector) + LR,cap-color_b,3,Integrated
+Integrated-SelectFromModel (RF selector) + LR,cap-color_p,4,Integrated
+Integrated-SelectFromModel (RF selector) + LR,cap-color_w,5,Integrated
+Integrated-SelectFromModel (RF selector) + LR,cap-color_y,6,Integrated
+Integrated-SelectFromModel (RF selector) + LR,cap-shape_b,7,Integrated
+Integrated-SelectFromModel (RF selector) + LR,cap-surface_f,8,Integrated
+Integrated-SelectFromModel (RF selector) + LR,cap-surface_s,9,Integrated
+Integrated-SelectFromModel (RF selector) + LR,cap-surface_y,10,Integrated
+Integrated-SelectFromModel (RF selector) + LR,gill-color_b,11,Integrated
+Integrated-SelectFromModel (RF selector) + LR,gill-color_h,12,Integrated
+Integrated-SelectFromModel (RF selector) + LR,gill-color_n,13,Integrated
+Integrated-SelectFromModel (RF selector) + LR,gill-color_w,14,Integrated
+Integrated-SelectFromModel (RF selector) + LR,gill-size_b,15,Integrated
+Integrated-SelectFromModel (RF selector) + LR,gill-size_n,16,Integrated
+Integrated-SelectFromModel (RF selector) + LR,gill-spacing_c,17,Integrated
+Integrated-SelectFromModel (RF selector) + LR,gill-spacing_w,18,Integrated
+Integrated-SelectFromModel (RF selector) + LR,habitat_d,19,Integrated
+Integrated-SelectFromModel (RF selector) + LR,habitat_g,20,Integrated
+Integrated-SelectFromModel (RF selector) + LR,habitat_m,21,Integrated
+Integrated-SelectFromModel (RF selector) + LR,habitat_p,22,Integrated
+Integrated-SelectFromModel (RF selector) + LR,habitat_u,23,Integrated
+Integrated-SelectFromModel (RF selector) + LR,odor_a,24,Integrated
+Integrated-SelectFromModel (RF selector) + LR,odor_c,25,Integrated
+Integrated-SelectFromModel (RF selector) + LR,odor_f,26,Integrated
+Integrated-SelectFromModel (RF selector) + LR,odor_l,27,Integrated
+Integrated-SelectFromModel (RF selector) + LR,odor_n,28,Integrated
+Integrated-SelectFromModel (RF selector) + LR,odor_p,29,Integrated
+Integrated-SelectFromModel (RF selector) + LR,odor_s,30,Integrated
+Integrated-SelectFromModel (RF selector) + LR,odor_y,31,Integrated
+Integrated-SelectFromModel (RF selector) + LR,population_a,32,Integrated
+Integrated-SelectFromModel (RF selector) + LR,population_c,33,Integrated
+Integrated-SelectFromModel (RF selector) + LR,population_n,34,Integrated
+Integrated-SelectFromModel (RF selector) + LR,population_s,35,Integrated
+Integrated-SelectFromModel (RF selector) + LR,population_v,36,Integrated
+Integrated-SelectFromModel (RF selector) + LR,population_y,37,Integrated
+Integrated-SelectFromModel (RF selector) + LR,ring-number_o,38,Integrated
+Integrated-SelectFromModel (RF selector) + LR,ring-number_t,39,Integrated
+Integrated-SelectFromModel (RF selector) + LR,ring-type_e,40,Integrated
+Integrated-SelectFromModel (RF selector) + LR,ring-type_f,41,Integrated
+Integrated-SelectFromModel (RF selector) + LR,ring-type_l,42,Integrated
+Integrated-SelectFromModel (RF selector) + LR,ring-type_p,43,Integrated
+Integrated-SelectFromModel (RF selector) + LR,spore-print-color_h,44,Integrated
+Integrated-SelectFromModel (RF selector) + LR,spore-print-color_k,45,Integrated
+Integrated-SelectFromModel (RF selector) + LR,spore-print-color_n,46,Integrated
+Integrated-SelectFromModel (RF selector) + LR,spore-print-color_r,47,Integrated
+Integrated-SelectFromModel (RF selector) + LR,spore-print-color_w,48,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-color-above-ring_b,49,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-color-above-ring_n,50,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-color-above-ring_p,51,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-color-above-ring_w,52,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-color-below-ring_n,53,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-color-below-ring_w,54,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-root_?,55,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-root_b,56,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-root_c,57,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-root_e,58,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-root_r,59,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-shape_e,60,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-shape_t,61,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-surface-above-ring_f,62,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-surface-above-ring_k,63,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-surface-above-ring_s,64,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-surface-below-ring_f,65,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-surface-below-ring_k,66,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-surface-below-ring_s,67,Integrated
+Integrated-SelectFromModel (RF selector) + LR,stalk-surface-below-ring_y,68,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,bruises_f,1,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,bruises_t,2,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,cap-color_b,3,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,cap-color_p,4,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,cap-color_w,5,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,cap-color_y,6,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,cap-shape_b,7,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,cap-surface_f,8,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,cap-surface_s,9,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,cap-surface_y,10,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,gill-color_b,11,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,gill-color_h,12,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,gill-color_n,13,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,gill-color_w,14,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,gill-size_b,15,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,gill-size_n,16,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,gill-spacing_c,17,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,gill-spacing_w,18,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,habitat_d,19,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,habitat_g,20,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,habitat_m,21,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,habitat_p,22,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,habitat_u,23,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,odor_a,24,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,odor_c,25,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,odor_f,26,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,odor_l,27,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,odor_n,28,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,odor_p,29,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,odor_s,30,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,odor_y,31,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,population_a,32,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,population_c,33,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,population_n,34,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,population_s,35,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,population_v,36,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,population_y,37,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,ring-number_o,38,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,ring-number_t,39,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,ring-type_e,40,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,ring-type_f,41,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,ring-type_l,42,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,ring-type_p,43,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,spore-print-color_h,44,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,spore-print-color_k,45,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,spore-print-color_n,46,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,spore-print-color_r,47,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,spore-print-color_w,48,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-color-above-ring_b,49,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-color-above-ring_n,50,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-color-above-ring_p,51,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-color-above-ring_w,52,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-color-below-ring_n,53,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-color-below-ring_w,54,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-root_?,55,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-root_b,56,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-root_c,57,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-root_e,58,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-root_r,59,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-shape_e,60,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-shape_t,61,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-surface-above-ring_f,62,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-surface-above-ring_k,63,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-surface-above-ring_s,64,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-surface-below-ring_f,65,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-surface-below-ring_k,66,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-surface-below-ring_s,67,Integrated
+Integrated-SelectFromModel (RF selector) + KNN,stalk-surface-below-ring_y,68,Integrated
+Integrated-RFECV (L1-LR) + LR,bruises_f,1,Integrated
+Integrated-RFECV (L1-LR) + LR,bruises_t,2,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-color_b,3,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-color_c,4,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-color_e,5,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-color_g,6,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-color_n,7,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-color_p,8,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-color_r,9,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-color_u,10,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-color_w,11,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-color_y,12,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-shape_b,13,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-shape_c,14,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-shape_f,15,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-shape_k,16,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-shape_s,17,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-shape_x,18,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-surface_f,19,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-surface_g,20,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-surface_s,21,Integrated
+Integrated-RFECV (L1-LR) + LR,cap-surface_y,22,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-attachment_a,23,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-attachment_f,24,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_b,25,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_e,26,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_g,27,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_h,28,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_k,29,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_n,30,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_o,31,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_p,32,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_r,33,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_u,34,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_w,35,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-color_y,36,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-size_b,37,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-size_n,38,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-spacing_c,39,Integrated
+Integrated-RFECV (L1-LR) + LR,gill-spacing_w,40,Integrated
+Integrated-RFECV (L1-LR) + LR,habitat_d,41,Integrated
+Integrated-RFECV (L1-LR) + LR,habitat_g,42,Integrated
+Integrated-RFECV (L1-LR) + LR,habitat_l,43,Integrated
+Integrated-RFECV (L1-LR) + LR,habitat_m,44,Integrated
+Integrated-RFECV (L1-LR) + LR,habitat_p,45,Integrated
+Integrated-RFECV (L1-LR) + LR,habitat_u,46,Integrated
+Integrated-RFECV (L1-LR) + LR,habitat_w,47,Integrated
+Integrated-RFECV (L1-LR) + LR,odor_a,48,Integrated
+Integrated-RFECV (L1-LR) + LR,odor_c,49,Integrated
+Integrated-RFECV (L1-LR) + LR,odor_f,50,Integrated
+Integrated-RFECV (L1-LR) + LR,odor_l,51,Integrated
+Integrated-RFECV (L1-LR) + LR,odor_m,52,Integrated
+Integrated-RFECV (L1-LR) + LR,odor_n,53,Integrated
+Integrated-RFECV (L1-LR) + LR,odor_p,54,Integrated
+Integrated-RFECV (L1-LR) + LR,odor_s,55,Integrated
+Integrated-RFECV (L1-LR) + LR,odor_y,56,Integrated
+Integrated-RFECV (L1-LR) + LR,population_a,57,Integrated
+Integrated-RFECV (L1-LR) + LR,population_c,58,Integrated
+Integrated-RFECV (L1-LR) + LR,population_n,59,Integrated
+Integrated-RFECV (L1-LR) + LR,population_s,60,Integrated
+Integrated-RFECV (L1-LR) + LR,population_v,61,Integrated
+Integrated-RFECV (L1-LR) + LR,population_y,62,Integrated
+Integrated-RFECV (L1-LR) + LR,ring-number_n,63,Integrated
+Integrated-RFECV (L1-LR) + LR,ring-number_o,64,Integrated
+Integrated-RFECV (L1-LR) + LR,ring-number_t,65,Integrated
+Integrated-RFECV (L1-LR) + LR,ring-type_e,66,Integrated
+Integrated-RFECV (L1-LR) + LR,ring-type_f,67,Integrated
+Integrated-RFECV (L1-LR) + LR,ring-type_l,68,Integrated
+Integrated-RFECV (L1-LR) + LR,ring-type_n,69,Integrated
+Integrated-RFECV (L1-LR) + LR,ring-type_p,70,Integrated
+Integrated-RFECV (L1-LR) + LR,spore-print-color_b,71,Integrated
+Integrated-RFECV (L1-LR) + LR,spore-print-color_h,72,Integrated
+Integrated-RFECV (L1-LR) + LR,spore-print-color_k,73,Integrated
+Integrated-RFECV (L1-LR) + LR,spore-print-color_n,74,Integrated
+Integrated-RFECV (L1-LR) + LR,spore-print-color_o,75,Integrated
+Integrated-RFECV (L1-LR) + LR,spore-print-color_r,76,Integrated
+Integrated-RFECV (L1-LR) + LR,spore-print-color_u,77,Integrated
+Integrated-RFECV (L1-LR) + LR,spore-print-color_w,78,Integrated
+Integrated-RFECV (L1-LR) + LR,spore-print-color_y,79,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-above-ring_b,80,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-above-ring_c,81,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-above-ring_e,82,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-above-ring_g,83,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-above-ring_n,84,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-above-ring_o,85,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-above-ring_p,86,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-above-ring_w,87,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-above-ring_y,88,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-below-ring_b,89,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-below-ring_c,90,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-below-ring_e,91,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-below-ring_g,92,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-below-ring_n,93,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-below-ring_o,94,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-below-ring_p,95,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-below-ring_w,96,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-color-below-ring_y,97,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-root_?,98,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-root_b,99,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-root_c,100,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-root_e,101,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-root_r,102,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-shape_e,103,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-shape_t,104,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-surface-above-ring_f,105,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-surface-above-ring_k,106,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-surface-above-ring_s,107,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-surface-above-ring_y,108,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-surface-below-ring_f,109,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-surface-below-ring_k,110,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-surface-below-ring_s,111,Integrated
+Integrated-RFECV (L1-LR) + LR,stalk-surface-below-ring_y,112,Integrated
+Integrated-RFECV (L1-LR) + LR,veil-color_n,113,Integrated
+Integrated-RFECV (L1-LR) + LR,veil-color_o,114,Integrated
+Integrated-RFECV (L1-LR) + LR,veil-color_w,115,Integrated
+Integrated-RFECV (L1-LR) + LR,veil-color_y,116,Integrated
+Integrated-RFECV (L1-LR) + LR,veil-type_p,117,Integrated
+Integrated-RFECV (L1-LR) + KNN,bruises_f,1,Integrated
+Integrated-RFECV (L1-LR) + KNN,bruises_t,2,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-color_b,3,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-color_c,4,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-color_e,5,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-color_g,6,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-color_n,7,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-color_p,8,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-color_r,9,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-color_u,10,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-color_w,11,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-color_y,12,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-shape_b,13,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-shape_c,14,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-shape_f,15,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-shape_k,16,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-shape_s,17,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-shape_x,18,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-surface_f,19,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-surface_g,20,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-surface_s,21,Integrated
+Integrated-RFECV (L1-LR) + KNN,cap-surface_y,22,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-attachment_a,23,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-attachment_f,24,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_b,25,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_e,26,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_g,27,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_h,28,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_k,29,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_n,30,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_o,31,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_p,32,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_r,33,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_u,34,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_w,35,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-color_y,36,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-size_b,37,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-size_n,38,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-spacing_c,39,Integrated
+Integrated-RFECV (L1-LR) + KNN,gill-spacing_w,40,Integrated
+Integrated-RFECV (L1-LR) + KNN,habitat_d,41,Integrated
+Integrated-RFECV (L1-LR) + KNN,habitat_g,42,Integrated
+Integrated-RFECV (L1-LR) + KNN,habitat_l,43,Integrated
+Integrated-RFECV (L1-LR) + KNN,habitat_m,44,Integrated
+Integrated-RFECV (L1-LR) + KNN,habitat_p,45,Integrated
+Integrated-RFECV (L1-LR) + KNN,habitat_u,46,Integrated
+Integrated-RFECV (L1-LR) + KNN,habitat_w,47,Integrated
+Integrated-RFECV (L1-LR) + KNN,odor_a,48,Integrated
+Integrated-RFECV (L1-LR) + KNN,odor_c,49,Integrated
+Integrated-RFECV (L1-LR) + KNN,odor_f,50,Integrated
+Integrated-RFECV (L1-LR) + KNN,odor_l,51,Integrated
+Integrated-RFECV (L1-LR) + KNN,odor_m,52,Integrated
+Integrated-RFECV (L1-LR) + KNN,odor_n,53,Integrated
+Integrated-RFECV (L1-LR) + KNN,odor_p,54,Integrated
+Integrated-RFECV (L1-LR) + KNN,odor_s,55,Integrated
+Integrated-RFECV (L1-LR) + KNN,odor_y,56,Integrated
+Integrated-RFECV (L1-LR) + KNN,population_a,57,Integrated
+Integrated-RFECV (L1-LR) + KNN,population_c,58,Integrated
+Integrated-RFECV (L1-LR) + KNN,population_n,59,Integrated
+Integrated-RFECV (L1-LR) + KNN,population_s,60,Integrated
+Integrated-RFECV (L1-LR) + KNN,population_v,61,Integrated
+Integrated-RFECV (L1-LR) + KNN,population_y,62,Integrated
+Integrated-RFECV (L1-LR) + KNN,ring-number_n,63,Integrated
+Integrated-RFECV (L1-LR) + KNN,ring-number_o,64,Integrated
+Integrated-RFECV (L1-LR) + KNN,ring-number_t,65,Integrated
+Integrated-RFECV (L1-LR) + KNN,ring-type_e,66,Integrated
+Integrated-RFECV (L1-LR) + KNN,ring-type_f,67,Integrated
+Integrated-RFECV (L1-LR) + KNN,ring-type_l,68,Integrated
+Integrated-RFECV (L1-LR) + KNN,ring-type_n,69,Integrated
+Integrated-RFECV (L1-LR) + KNN,ring-type_p,70,Integrated
+Integrated-RFECV (L1-LR) + KNN,spore-print-color_b,71,Integrated
+Integrated-RFECV (L1-LR) + KNN,spore-print-color_h,72,Integrated
+Integrated-RFECV (L1-LR) + KNN,spore-print-color_k,73,Integrated
+Integrated-RFECV (L1-LR) + KNN,spore-print-color_n,74,Integrated
+Integrated-RFECV (L1-LR) + KNN,spore-print-color_o,75,Integrated
+Integrated-RFECV (L1-LR) + KNN,spore-print-color_r,76,Integrated
+Integrated-RFECV (L1-LR) + KNN,spore-print-color_u,77,Integrated
+Integrated-RFECV (L1-LR) + KNN,spore-print-color_w,78,Integrated
+Integrated-RFECV (L1-LR) + KNN,spore-print-color_y,79,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-above-ring_b,80,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-above-ring_c,81,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-above-ring_e,82,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-above-ring_g,83,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-above-ring_n,84,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-above-ring_o,85,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-above-ring_p,86,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-above-ring_w,87,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-above-ring_y,88,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-below-ring_b,89,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-below-ring_c,90,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-below-ring_e,91,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-below-ring_g,92,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-below-ring_n,93,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-below-ring_o,94,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-below-ring_p,95,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-below-ring_w,96,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-color-below-ring_y,97,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-root_?,98,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-root_b,99,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-root_c,100,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-root_e,101,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-root_r,102,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-shape_e,103,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-shape_t,104,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-surface-above-ring_f,105,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-surface-above-ring_k,106,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-surface-above-ring_s,107,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-surface-above-ring_y,108,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-surface-below-ring_f,109,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-surface-below-ring_k,110,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-surface-below-ring_s,111,Integrated
+Integrated-RFECV (L1-LR) + KNN,stalk-surface-below-ring_y,112,Integrated
+Integrated-RFECV (L1-LR) + KNN,veil-color_n,113,Integrated
+Integrated-RFECV (L1-LR) + KNN,veil-color_o,114,Integrated
+Integrated-RFECV (L1-LR) + KNN,veil-color_w,115,Integrated
+Integrated-RFECV (L1-LR) + KNN,veil-color_y,116,Integrated
+Integrated-RFECV (L1-LR) + KNN,veil-type_p,117,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,bruises_f,1,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,bruises_t,2,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-color_b,3,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-color_c,4,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-color_e,5,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-color_g,6,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-color_n,7,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-color_p,8,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-color_r,9,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-color_u,10,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-color_w,11,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-color_y,12,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-shape_b,13,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-shape_c,14,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-shape_f,15,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-shape_k,16,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-shape_s,17,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-shape_x,18,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-surface_f,19,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-surface_g,20,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-surface_s,21,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,cap-surface_y,22,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-attachment_a,23,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-attachment_f,24,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_b,25,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_e,26,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_g,27,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_h,28,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_k,29,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_n,30,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_o,31,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_p,32,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_r,33,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_u,34,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_w,35,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-color_y,36,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-size_b,37,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-size_n,38,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-spacing_c,39,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,gill-spacing_w,40,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,habitat_d,41,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,habitat_g,42,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,habitat_l,43,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,habitat_m,44,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,habitat_p,45,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,habitat_u,46,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,habitat_w,47,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,odor_a,48,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,odor_c,49,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,odor_f,50,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,odor_l,51,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,odor_m,52,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,odor_n,53,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,odor_p,54,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,odor_s,55,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,odor_y,56,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,population_a,57,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,population_c,58,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,population_n,59,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,population_s,60,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,population_v,61,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,population_y,62,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,ring-number_n,63,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,ring-number_o,64,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,ring-number_t,65,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,ring-type_e,66,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,ring-type_f,67,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,ring-type_l,68,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,ring-type_n,69,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,ring-type_p,70,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,spore-print-color_b,71,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,spore-print-color_h,72,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,spore-print-color_k,73,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,spore-print-color_n,74,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,spore-print-color_o,75,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,spore-print-color_r,76,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,spore-print-color_u,77,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,spore-print-color_w,78,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,spore-print-color_y,79,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-above-ring_b,80,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-above-ring_c,81,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-above-ring_e,82,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-above-ring_g,83,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-above-ring_n,84,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-above-ring_o,85,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-above-ring_p,86,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-above-ring_w,87,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-above-ring_y,88,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-below-ring_b,89,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-below-ring_c,90,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-below-ring_e,91,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-below-ring_g,92,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-below-ring_n,93,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-below-ring_o,94,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-below-ring_p,95,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-below-ring_w,96,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-color-below-ring_y,97,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-root_?,98,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-root_b,99,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-root_c,100,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-root_e,101,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-root_r,102,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-shape_e,103,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-shape_t,104,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-surface-above-ring_f,105,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-surface-above-ring_k,106,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-surface-above-ring_s,107,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-surface-above-ring_y,108,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-surface-below-ring_f,109,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-surface-below-ring_k,110,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-surface-below-ring_s,111,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,stalk-surface-below-ring_y,112,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,veil-color_n,113,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,veil-color_o,114,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,veil-color_w,115,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,veil-color_y,116,Integrated
+Integrated-RFECV (L1-LR) + Naive Bayes,veil-type_p,117,Integrated
