@@ -1569,7 +1569,7 @@ else:
         all_classifier_results[clf_name] = {
             'avg_metrics': avg_metrics,
             'std_metrics': std_metrics,
-            'top_features': (model_feature_importance / kf.cvargs['n_splits']).sort_values(ascending=False).head(10),
+            'top_features': (model_feature_importance / len(splits)).sort_values(ascending=False).head(10),
             'confusion_matrix': np.sum(confusion_matrices, axis=0),
             'total_cv_folds': len(metrics_history['Accuracy']),
             'selected_features_count': selected_features_count,
@@ -1586,7 +1586,7 @@ else:
             print(f"{metric}: {avg_metrics[metric]:.3f} ± {std_metrics[metric]:.3f}")
 
         print("\nTop 5 Features:")
-        avg_importance = (model_feature_importance / kf.cvargs['n_splits']).sort_values(ascending=False)
+        avg_importance = (model_feature_importance / len(splits)).sort_values(ascending=False)
         for feat, imp in avg_importance.head(5).items():
             print(f"{feat}: {imp:.4f}")
 
