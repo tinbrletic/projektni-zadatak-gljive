@@ -903,6 +903,7 @@ for method, features in zip(method_names, feature_lists):
 all_features = X.columns.tolist()
 
 # Define classifiers including baseline (All) and statistical-selection variants
+TOP_K = 15  # Number of top features to select for statistical methods
 classifiers = {
     # Baseline (All features)
     "Random Forest (All)": {
@@ -952,7 +953,7 @@ classifiers = {
     # Random Forest statistical subsets (in-CV selection to avoid leakage)
     "Random Forest (MW - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='mann_whitney', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='mann_whitney', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('clf', RandomForestClassifier(n_estimators=200, max_depth=10, random_state=42, n_jobs=-1))
         ]),
         'selector': 'integrated',
@@ -960,7 +961,7 @@ classifiers = {
     },
     "Random Forest (Wilcoxon - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='wilcoxon', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='wilcoxon', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('clf', RandomForestClassifier(n_estimators=200, max_depth=10, random_state=42, n_jobs=-1))
         ]),
         'selector': 'integrated',
@@ -968,7 +969,7 @@ classifiers = {
     },
     "Random Forest (Kruskal - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='kruskal', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='kruskal', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('clf', RandomForestClassifier(n_estimators=200, max_depth=10, random_state=42, n_jobs=-1))
         ]),
         'selector': 'integrated',
@@ -976,7 +977,7 @@ classifiers = {
     },
     "Random Forest (Chi-square - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='chi2', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='chi2', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('clf', RandomForestClassifier(n_estimators=200, max_depth=10, random_state=42, n_jobs=-1))
         ]),
         'selector': 'integrated',
@@ -984,7 +985,7 @@ classifiers = {
     },
     "Random Forest (KS - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='ks_2samp', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='ks_2samp', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('clf', RandomForestClassifier(n_estimators=200, max_depth=10, random_state=42, n_jobs=-1))
         ]),
         'selector': 'integrated',
@@ -993,7 +994,7 @@ classifiers = {
     # Logistic Regression statistical subsets
     "Logistic Regression (MW - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='mann_whitney', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='mann_whitney', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('clf', LogisticRegression(max_iter=5000, class_weight='balanced', solver='saga', penalty='l1', C=0.1, random_state=42, n_jobs=-1))
         ]),
@@ -1002,7 +1003,7 @@ classifiers = {
     },
     "Logistic Regression (Wilcoxon - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='wilcoxon', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='wilcoxon', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('clf', LogisticRegression(max_iter=5000, class_weight='balanced', solver='saga', penalty='l1', C=0.1, random_state=42, n_jobs=-1))
         ]),
@@ -1011,7 +1012,7 @@ classifiers = {
     },
     "Logistic Regression (Kruskal - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='kruskal', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='kruskal', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('clf', LogisticRegression(max_iter=5000, class_weight='balanced', solver='saga', penalty='l1', C=0.1, random_state=42, n_jobs=-1))
         ]),
@@ -1020,7 +1021,7 @@ classifiers = {
     },
     "Logistic Regression (Chi-square - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='chi2', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='chi2', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('clf', LogisticRegression(max_iter=5000, class_weight='balanced', solver='saga', penalty='l1', C=0.1, random_state=42, n_jobs=-1))
         ]),
@@ -1029,7 +1030,7 @@ classifiers = {
     },
     "Logistic Regression (KS - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='ks_2samp', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='ks_2samp', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('clf', LogisticRegression(max_iter=5000, class_weight='balanced', solver='saga', penalty='l1', C=0.1, random_state=42, n_jobs=-1))
         ]),
@@ -1039,7 +1040,7 @@ classifiers = {
     # SVM statistical subsets
     "SVM (MW - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='mann_whitney', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='mann_whitney', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('svc', SVC(kernel='rbf', C=0.5, probability=True, random_state=42))
         ]),
@@ -1048,7 +1049,7 @@ classifiers = {
     },
     "SVM (Wilcoxon - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='wilcoxon', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='wilcoxon', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('svc', SVC(kernel='rbf', C=0.5, probability=True, random_state=42))
         ]),
@@ -1057,7 +1058,7 @@ classifiers = {
     },
     "SVM (Kruskal - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='kruskal', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='kruskal', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('svc', SVC(kernel='rbf', C=0.5, probability=True, random_state=42))
         ]),
@@ -1066,7 +1067,7 @@ classifiers = {
     },
     "SVM (Chi-square - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='chi2', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='chi2', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('svc', SVC(kernel='rbf', C=0.5, probability=True, random_state=42))
         ]),
@@ -1075,7 +1076,7 @@ classifiers = {
     },
     "SVM (KS - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='ks_2samp', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='ks_2samp', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('svc', SVC(kernel='rbf', C=0.5, probability=True, random_state=42))
         ]),
@@ -1085,7 +1086,7 @@ classifiers = {
     # K-Neighbors statistical subsets
     "K-Neighbors (MW - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='mann_whitney', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='mann_whitney', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('knn', KNeighborsClassifier(n_neighbors=15, algorithm='kd_tree'))
         ]),
@@ -1094,7 +1095,7 @@ classifiers = {
     },
     "K-Neighbors (Wilcoxon - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='wilcoxon', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='wilcoxon', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('knn', KNeighborsClassifier(n_neighbors=15, algorithm='kd_tree'))
         ]),
@@ -1103,7 +1104,7 @@ classifiers = {
     },
     "K-Neighbors (Kruskal - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='kruskal', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='kruskal', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('knn', KNeighborsClassifier(n_neighbors=15, algorithm='kd_tree'))
         ]),
@@ -1112,7 +1113,7 @@ classifiers = {
     },
     "K-Neighbors (Chi-square - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='chi2', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='chi2', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('knn', KNeighborsClassifier(n_neighbors=15, algorithm='kd_tree'))
         ]),
@@ -1121,7 +1122,7 @@ classifiers = {
     },
     "K-Neighbors (KS - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='ks_2samp', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='ks_2samp', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('scaler', StandardScaler()),
             ('knn', KNeighborsClassifier(n_neighbors=15, algorithm='kd_tree'))
         ]),
@@ -1131,7 +1132,7 @@ classifiers = {
     # Decision Tree statistical subsets
     "Decision Tree (MW - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='mann_whitney', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='mann_whitney', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('clf', DecisionTreeClassifier(max_depth=5, min_samples_split=10, random_state=42))
         ]),
         'selector': 'integrated',
@@ -1139,7 +1140,7 @@ classifiers = {
     },
     "Decision Tree (Wilcoxon - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='wilcoxon', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='wilcoxon', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('clf', DecisionTreeClassifier(max_depth=5, min_samples_split=10, random_state=42))
         ]),
         'selector': 'integrated',
@@ -1147,7 +1148,7 @@ classifiers = {
     },
     "Decision Tree (Kruskal - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='kruskal', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='kruskal', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('clf', DecisionTreeClassifier(max_depth=5, min_samples_split=10, random_state=42))
         ]),
         'selector': 'integrated',
@@ -1155,7 +1156,7 @@ classifiers = {
     },
     "Decision Tree (Chi-square - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='chi2', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='chi2', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('clf', DecisionTreeClassifier(max_depth=5, min_samples_split=10, random_state=42))
         ]),
         'selector': 'integrated',
@@ -1163,7 +1164,7 @@ classifiers = {
     },
     "Decision Tree (KS - inCV)": {
         'model': Pipeline([
-            ('stat', StatSelect(method='ks_2samp', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
+            ('stat', StatSelect(method='ks_2samp', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False)),
             ('clf', DecisionTreeClassifier(max_depth=5, min_samples_split=10, random_state=42))
         ]),
         'selector': 'integrated',
@@ -1171,27 +1172,27 @@ classifiers = {
     },
     # Naive Bayes statistical subsets
     "Naive Bayes (MW - inCV)": {
-        'model': make_pipeline(StatSelect(method='mann_whitney', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False), StandardScaler(), GaussianNB()),
+        'model': make_pipeline(StatSelect(method='mann_whitney', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False), StandardScaler(), GaussianNB()),
         'selector': 'integrated',
         'features': None
     },
     "Naive Bayes (Wilcoxon - inCV)": {
-        'model': make_pipeline(StatSelect(method='wilcoxon', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False), StandardScaler(), GaussianNB()),
+        'model': make_pipeline(StatSelect(method='wilcoxon', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False), StandardScaler(), GaussianNB()),
         'selector': 'integrated',
         'features': None
     },
     "Naive Bayes (Kruskal - inCV)": {
-        'model': make_pipeline(StatSelect(method='kruskal', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False), StandardScaler(), GaussianNB()),
+        'model': make_pipeline(StatSelect(method='kruskal', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False), StandardScaler(), GaussianNB()),
         'selector': 'integrated',
         'features': None
     },
     "Naive Bayes (Chi-square - inCV)": {
-        'model': make_pipeline(StatSelect(method='chi2', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False), StandardScaler(), GaussianNB()),
+        'model': make_pipeline(StatSelect(method='chi2', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False), StandardScaler(), GaussianNB()),
         'selector': 'integrated',
         'features': None
     },
     "Naive Bayes (KS - inCV)": {
-        'model': make_pipeline(StatSelect(method='ks_2samp', top_k=15, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False), StandardScaler(), GaussianNB()),
+        'model': make_pipeline(StatSelect(method='ks_2samp', top_k=TOP_K, alpha=0.05, adjust='bh', es_min=0.10, corr_filter=False), StandardScaler(), GaussianNB()),
         'selector': 'integrated',
         'features': None
     },
