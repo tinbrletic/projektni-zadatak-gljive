@@ -246,7 +246,7 @@ def fmt_p(p):
 
 
 class StatSelect(BaseEstimator, TransformerMixin):
-    def __init__(self, method='mann_whitney', top_k=15, alpha=0.05, adjust='bh',
+    def __init__(self, method='mann_whitney', top_k=5, alpha=0.05, adjust='bh',
                  es_min=0.10, corr_filter=False, corr_threshold=0.95, random_state=42):
         self.method = method
         self.top_k = top_k
@@ -669,7 +669,7 @@ def run_statistical_evaluation(all_results, metric_name='AUC-ROC', alpha=0.05, p
 def statistical_feature_selection(
     X, y,
     method='mann_whitney',
-    top_k=10,
+    top_k=5,
     alpha=0.05,
     adjust='bh',
     es_min=0.10
@@ -1389,7 +1389,8 @@ else:
 
         metrics_history = {metric: [] for metric in ['Accuracy', 'F1', 'AUC-ROC', 'Precision', 'Recall', 'MCC']}
         # OOF predictions vector for this model
-        y_oof = np.full(len(y), np.nan, dtype=float)
+        y_oof_sum = np.zeros(len(y), dtype=float)
+        y_oof_cnt = np.zeros(len(y), dtype=int)
         # Accumulate per-fold feature importance for this classifier.
         model_feature_importance = pd.Series(0.0, index=X.columns)
         confusion_matrices = []
@@ -1418,7 +1419,9 @@ else:
 
 
                 # Save out-of-fold predictions for current test index
-                y_oof[test_idx] = y_proba
+                y_oof_sum[test_idx] += y_proba
+                y_oof_cnt[test_idx] += 1
+
 
                 # Extract importances from pipeline
                 importances_series = extract_feature_importance_from_pipeline(model_fitted, X.columns)
@@ -1471,7 +1474,9 @@ else:
 
 
                 # Save out-of-fold predictions for current test index
-                y_oof[test_idx] = y_proba
+                y_oof_sum[test_idx] += y_proba
+                y_oof_cnt[test_idx] += 1
+
 
                 # For feature importance, use model-based importance if available
                 if hasattr(model_fitted, 'feature_importances_'):
@@ -1548,15 +1553,18 @@ else:
 
         fold_metrics_copy = {m: list(vals) for m, vals in metrics_history.items()}
 
-        # OOF ROC and AUC for this model
-        mask = ~np.isnan(y_oof)
+        # OOF ROC and AUC for this model (repeated CV-safe)
+        mask = y_oof_cnt > 0
         if mask.sum() > 0 and np.unique(y.values[mask]).size == 2:
+            y_oof = np.full(len(y), np.nan, dtype=float)
+            y_oof[mask] = y_oof_sum[mask] / y_oof_cnt[mask]
+
             y_true_oof = (y.values[mask] == 'p').astype(int)
             fpr, tpr, thresholds = roc_curve(y_true_oof, y_oof[mask])
             roc_auc_val = auc(fpr, tpr)
-
         else:
             fpr, tpr, roc_auc_val = np.array([0.0, 1.0]), np.array([0.0, 1.0]), float('nan')
+
 
         all_classifier_results[clf_name] = {
             'avg_metrics': avg_metrics,
