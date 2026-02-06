@@ -1,0 +1,2002 @@
+PEPTIDE SYNTHESIS PREDICTION - FEATURE SELECTION RESULTS
+================================================================================
+
+Experiment Date: 2025-12-22 01:55:34
+Dataset: mushrooms.csv
+Total samples: 8124
+Total features: 117
+Cross-validation: 10-fold, 5 repeats
+Random state: 42
+
+DETAILED PERFORMANCE METRICS:
+================================================================================
+
+Random Forest (All):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 1.000000 ± 0.000000
+  F1: 1.000000 ± 0.000000
+  AUC-ROC: 1.000000 ± 0.000000
+  Precision: 1.000000 ± 0.000000
+  Recall: 1.000000 ± 0.000000
+  MCC: 1.000000 ± 0.000000
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:      0    True Positive:   19580
+
+Top 10 Features (Average Importance):
+   1. odor_n                         0.139342
+   2. odor_f                         0.077283
+   3. gill-size_n                    0.065193
+   4. gill-size_b                    0.053515
+   5. stalk-surface-below-ring_k     0.051904
+   6. stalk-surface-above-ring_k     0.045477
+   7. gill-color_b                   0.043034
+   8. spore-print-color_h            0.037615
+   9. ring-type_p                    0.030197
+  10. bruises_f                      0.027036
+
+================================================================================
+
+Logistic Regression (All):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.999508 ± 0.000739
+  F1: 0.999488 ± 0.000768
+  AUC-ROC: 0.999996 ± 0.000022
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.998978 ± 0.001532
+  MCC: 0.999015 ± 0.001476
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:     20    True Positive:   19560
+
+Top 10 Features (Average Importance):
+   1. odor_n                         4.055675
+   2. odor_l                         1.778559
+   3. odor_a                         1.778525
+   4. odor_f                         1.198709
+   5. spore-print-color_r            0.985221
+   6. gill-size_b                    0.735839
+   7. gill-size_n                    0.735839
+   8. stalk-surface-above-ring_k     0.724833
+   9. stalk-surface-below-ring_y     0.449187
+  10. stalk-color-below-ring_y       0.145189
+
+================================================================================
+
+SVM (All):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.999138 ± 0.000961
+  F1: 0.999104 ± 0.001000
+  AUC-ROC: 1.000000 ± 0.000000
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.998212 ± 0.001995
+  MCC: 0.998277 ± 0.001921
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:     35    True Positive:   19545
+
+Top 10 Features (Average Importance):
+   1. population_v                   0.250023
+   2. ring-type_p                    0.249897
+   3. stalk-root_b                   0.248792
+   4. stalk-color-below-ring_w       0.248460
+   5. stalk-color-above-ring_w       0.247582
+   6. cap-shape_x                    0.247533
+   7. odor_n                         0.245712
+   8. stalk-shape_t                  0.245514
+   9. stalk-shape_e                  0.245514
+  10. bruises_f                      0.242901
+
+================================================================================
+
+K-Neighbors (All):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.999015 ± 0.001101
+  F1: 0.998976 ± 0.001145
+  AUC-ROC: 0.999999 ± 0.000003
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.997957 ± 0.002284
+  MCC: 0.998032 ± 0.002199
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:     40    True Positive:   19540
+
+Top 10 Features (Average Importance):
+   1. population_v                   0.250023
+   2. ring-type_p                    0.249897
+   3. stalk-root_b                   0.248792
+   4. stalk-color-below-ring_w       0.248460
+   5. stalk-color-above-ring_w       0.247582
+   6. cap-shape_x                    0.247533
+   7. odor_n                         0.245712
+   8. stalk-shape_t                  0.245514
+   9. stalk-shape_e                  0.245514
+  10. bruises_f                      0.242901
+
+================================================================================
+
+Decision Tree (All):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.998695 ± 0.001929
+  F1: 0.998649 ± 0.001994
+  AUC-ROC: 0.998980 ± 0.001763
+  Precision: 0.998534 ± 0.003575
+  Recall: 0.998774 ± 0.002242
+  MCC: 0.997397 ± 0.003845
+
+Confusion Matrix (Aggregated):
+  True Negative:   21011    False Positive:     29
+  False Negative:     24    True Positive:   19556
+
+Top 10 Features (Average Importance):
+   1. odor_n                         0.619160
+   2. stalk-root_c                   0.177878
+   3. stalk-surface-below-ring_y     0.099587
+   4. spore-print-color_r            0.033926
+   5. odor_a                         0.019550
+   6. odor_l                         0.018181
+   7. population_c                   0.015631
+   8. spore-print-color_u            0.003900
+   9. gill-size_n                    0.002105
+  10. gill-size_b                    0.002066
+
+================================================================================
+
+Naive Bayes (All):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.953373 ± 0.007349
+  F1: 0.953883 ± 0.006956
+  AUC-ROC: 0.994489 ± 0.002535
+  Precision: 0.912552 ± 0.012632
+  Recall: 0.999234 ± 0.001277
+  MCC: 0.910847 ± 0.013507
+
+Confusion Matrix (Aggregated):
+  True Negative:   19161    False Positive:   1879
+  False Negative:     15    True Positive:   19565
+
+Top 10 Features (Average Importance):
+   1. population_v                   0.250023
+   2. ring-type_p                    0.249897
+   3. stalk-root_b                   0.248792
+   4. stalk-color-below-ring_w       0.248460
+   5. stalk-color-above-ring_w       0.247582
+   6. cap-shape_x                    0.247533
+   7. odor_n                         0.245712
+   8. stalk-shape_t                  0.245514
+   9. stalk-shape_e                  0.245514
+  10. bruises_f                      0.242901
+
+================================================================================
+
+Random Forest (MW - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.978380 ± 0.003537
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Random Forest (Wilcoxon - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.978380 ± 0.003537
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Random Forest (Kruskal - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.950616 ± 0.023626
+  F1: 0.945602 ± 0.027466
+  AUC-ROC: 0.983121 ± 0.006652
+  Precision: 0.988674 ± 0.013803
+  Recall: 0.908932 ± 0.061360
+  MCC: 0.905570 ± 0.043297
+
+Confusion Matrix (Aggregated):
+  True Negative:   20817    False Positive:    223
+  False Negative:   1783    True Positive:   17797
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. stalk-surface-above-ring_k     1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. ring-type_p                    0.500000
+   6. gill-size_b                    0.380000
+   7. gill-size_n                    0.060000
+   8. gill-color_b                   0.060000
+   9. cap-shape_x                    0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Random Forest (Chi-square - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.941900 ± 0.008095
+  F1: 0.937446 ± 0.009061
+  AUC-ROC: 0.979650 ± 0.004740
+  Precision: 0.973667 ± 0.008218
+  Recall: 0.903982 ± 0.015375
+  MCC: 0.885599 ± 0.015727
+
+Confusion Matrix (Aggregated):
+  True Negative:   20560    False Positive:    480
+  False Negative:   1880    True Positive:   17700
+
+Top 10 Features (Average Importance):
+   1. odor_n                         1.000000
+   2. stalk-surface-below-ring_k     1.000000
+   3. stalk-surface-above-ring_k     1.000000
+   4. gill-size_b                    0.980000
+   5. ring-type_p                    0.540000
+   6. gill-size_n                    0.480000
+   7. cap-shape_x                    0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Random Forest (KS - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.978380 ± 0.003537
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Logistic Regression (MW - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.930132 ± 0.007168
+  F1: 0.921794 ± 0.008653
+  AUC-ROC: 0.973189 ± 0.005615
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.855053 ± 0.014894
+  MCC: 0.868063 ± 0.012852
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2838    True Positive:   16742
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Logistic Regression (Wilcoxon - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.930132 ± 0.007168
+  F1: 0.921794 ± 0.008653
+  AUC-ROC: 0.973189 ± 0.005615
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.855053 ± 0.014894
+  MCC: 0.868063 ± 0.012852
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2838    True Positive:   16742
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Logistic Regression (Kruskal - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.949016 ± 0.024904
+  F1: 0.943674 ± 0.029010
+  AUC-ROC: 0.978446 ± 0.007698
+  Precision: 0.988674 ± 0.013803
+  Recall: 0.905611 ± 0.064092
+  MCC: 0.902702 ± 0.045584
+
+Confusion Matrix (Aggregated):
+  True Negative:   20817    False Positive:    223
+  False Negative:   1848    True Positive:   17732
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. stalk-surface-above-ring_k     1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. ring-type_p                    0.500000
+   6. gill-size_b                    0.380000
+   7. gill-size_n                    0.060000
+   8. gill-color_b                   0.060000
+   9. cap-shape_x                    0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Logistic Regression (Chi-square - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.941900 ± 0.008095
+  F1: 0.937446 ± 0.009061
+  AUC-ROC: 0.975491 ± 0.005541
+  Precision: 0.973667 ± 0.008218
+  Recall: 0.903982 ± 0.015375
+  MCC: 0.885599 ± 0.015727
+
+Confusion Matrix (Aggregated):
+  True Negative:   20560    False Positive:    480
+  False Negative:   1880    True Positive:   17700
+
+Top 10 Features (Average Importance):
+   1. odor_n                         1.000000
+   2. stalk-surface-below-ring_k     1.000000
+   3. stalk-surface-above-ring_k     1.000000
+   4. gill-size_b                    0.980000
+   5. ring-type_p                    0.540000
+   6. gill-size_n                    0.480000
+   7. cap-shape_x                    0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Logistic Regression (KS - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.930132 ± 0.007168
+  F1: 0.921794 ± 0.008653
+  AUC-ROC: 0.973189 ± 0.005615
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.855053 ± 0.014894
+  MCC: 0.868063 ± 0.012852
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2838    True Positive:   16742
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+SVM (MW - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.950370 ± 0.016487
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+SVM (Wilcoxon - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.950370 ± 0.016487
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+SVM (Kruskal - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.950616 ± 0.023626
+  F1: 0.945602 ± 0.027466
+  AUC-ROC: 0.965759 ± 0.019958
+  Precision: 0.988674 ± 0.013803
+  Recall: 0.908932 ± 0.061360
+  MCC: 0.905570 ± 0.043297
+
+Confusion Matrix (Aggregated):
+  True Negative:   20817    False Positive:    223
+  False Negative:   1783    True Positive:   17797
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. stalk-surface-above-ring_k     1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. ring-type_p                    0.500000
+   6. gill-size_b                    0.380000
+   7. gill-size_n                    0.060000
+   8. gill-color_b                   0.060000
+   9. cap-shape_x                    0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+SVM (Chi-square - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.941900 ± 0.008095
+  F1: 0.937446 ± 0.009061
+  AUC-ROC: 0.962296 ± 0.013874
+  Precision: 0.973667 ± 0.008218
+  Recall: 0.903982 ± 0.015375
+  MCC: 0.885599 ± 0.015727
+
+Confusion Matrix (Aggregated):
+  True Negative:   20560    False Positive:    480
+  False Negative:   1880    True Positive:   17700
+
+Top 10 Features (Average Importance):
+   1. odor_n                         1.000000
+   2. stalk-surface-below-ring_k     1.000000
+   3. stalk-surface-above-ring_k     1.000000
+   4. gill-size_b                    0.980000
+   5. ring-type_p                    0.540000
+   6. gill-size_n                    0.480000
+   7. cap-shape_x                    0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+SVM (KS - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.950370 ± 0.016487
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+K-Neighbors (MW - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.975766 ± 0.004485
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+K-Neighbors (Wilcoxon - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.975766 ± 0.004485
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+K-Neighbors (Kruskal - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.948794 ± 0.024596
+  F1: 0.943533 ± 0.028586
+  AUC-ROC: 0.979621 ± 0.007300
+  Precision: 0.987935 ± 0.013750
+  Recall: 0.905709 ± 0.061838
+  MCC: 0.902012 ± 0.045288
+
+Confusion Matrix (Aggregated):
+  True Negative:   20806    False Positive:    234
+  False Negative:   1846    True Positive:   17734
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. stalk-surface-above-ring_k     1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. ring-type_p                    0.500000
+   6. gill-size_b                    0.380000
+   7. gill-size_n                    0.060000
+   8. gill-color_b                   0.060000
+   9. cap-shape_x                    0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+K-Neighbors (Chi-square - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.938847 ± 0.015108
+  F1: 0.933530 ± 0.018672
+  AUC-ROC: 0.948997 ± 0.007850
+  Precision: 0.975114 ± 0.010295
+  Recall: 0.896323 ± 0.035786
+  MCC: 0.880461 ± 0.026655
+
+Confusion Matrix (Aggregated):
+  True Negative:   20586    False Positive:    454
+  False Negative:   2030    True Positive:   17550
+
+Top 10 Features (Average Importance):
+   1. odor_n                         1.000000
+   2. stalk-surface-below-ring_k     1.000000
+   3. stalk-surface-above-ring_k     1.000000
+   4. gill-size_b                    0.980000
+   5. ring-type_p                    0.540000
+   6. gill-size_n                    0.480000
+   7. cap-shape_x                    0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+K-Neighbors (KS - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.975766 ± 0.004485
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Decision Tree (MW - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.978380 ± 0.003537
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Decision Tree (Wilcoxon - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.978380 ± 0.003537
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Decision Tree (Kruskal - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.950616 ± 0.023626
+  F1: 0.945602 ± 0.027466
+  AUC-ROC: 0.983121 ± 0.006652
+  Precision: 0.988674 ± 0.013803
+  Recall: 0.908932 ± 0.061360
+  MCC: 0.905570 ± 0.043297
+
+Confusion Matrix (Aggregated):
+  True Negative:   20817    False Positive:    223
+  False Negative:   1783    True Positive:   17797
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. stalk-surface-above-ring_k     1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. ring-type_p                    0.500000
+   6. gill-size_b                    0.380000
+   7. gill-size_n                    0.060000
+   8. gill-color_b                   0.060000
+   9. cap-shape_x                    0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Decision Tree (Chi-square - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.941900 ± 0.008095
+  F1: 0.937446 ± 0.009061
+  AUC-ROC: 0.979649 ± 0.004740
+  Precision: 0.973667 ± 0.008218
+  Recall: 0.903982 ± 0.015375
+  MCC: 0.885599 ± 0.015727
+
+Confusion Matrix (Aggregated):
+  True Negative:   20560    False Positive:    480
+  False Negative:   1880    True Positive:   17700
+
+Top 10 Features (Average Importance):
+   1. odor_n                         1.000000
+   2. stalk-surface-below-ring_k     1.000000
+   3. stalk-surface-above-ring_k     1.000000
+   4. gill-size_b                    0.980000
+   5. ring-type_p                    0.540000
+   6. gill-size_n                    0.480000
+   7. cap-shape_x                    0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Decision Tree (KS - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.934022 ± 0.007407
+  F1: 0.926460 ± 0.008879
+  AUC-ROC: 0.978380 ± 0.003537
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.863123 ± 0.015383
+  MCC: 0.875055 ± 0.013331
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   2680    True Positive:   16900
+
+Top 10 Features (Average Importance):
+   1. odor_f                         1.000000
+   2. odor_n                         1.000000
+   3. ring-type_p                    1.000000
+   4. stalk-surface-below-ring_k     1.000000
+   5. stalk-surface-above-ring_k     1.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Naive Bayes (MW - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.894633 ± 0.009586
+  F1: 0.877150 ± 0.012573
+  AUC-ROC: 0.968532 ± 0.006207
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.781404 ± 0.019939
+  MCC: 0.805889 ± 0.016466
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   4280    True Positive:   15300
+
+Top 10 Features (Average Importance):
+   1. cap-shape_b                    0.000000
+   2. cap-shape_c                    0.000000
+   3. cap-shape_f                    0.000000
+   4. cap-shape_k                    0.000000
+   5. cap-shape_s                    0.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Naive Bayes (Wilcoxon - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.894633 ± 0.009586
+  F1: 0.877150 ± 0.012573
+  AUC-ROC: 0.968532 ± 0.006207
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.781404 ± 0.019939
+  MCC: 0.805889 ± 0.016466
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   4280    True Positive:   15300
+
+Top 10 Features (Average Importance):
+   1. cap-shape_b                    0.000000
+   2. cap-shape_c                    0.000000
+   3. cap-shape_f                    0.000000
+   4. cap-shape_k                    0.000000
+   5. cap-shape_s                    0.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Naive Bayes (Kruskal - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.896726 ± 0.010889
+  F1: 0.879842 ± 0.014128
+  AUC-ROC: 0.974249 ± 0.008122
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.785748 ± 0.022618
+  MCC: 0.809513 ± 0.018788
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   4195    True Positive:   15385
+
+Top 10 Features (Average Importance):
+   1. cap-shape_b                    0.000000
+   2. cap-shape_c                    0.000000
+   3. cap-shape_f                    0.000000
+   4. cap-shape_k                    0.000000
+   5. cap-shape_s                    0.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Naive Bayes (Chi-square - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.933037 ± 0.008791
+  F1: 0.928605 ± 0.009638
+  AUC-ROC: 0.972617 ± 0.005509
+  Precision: 0.954808 ± 0.010695
+  Recall: 0.903982 ± 0.015375
+  MCC: 0.866938 ± 0.017403
+
+Confusion Matrix (Aggregated):
+  True Negative:   20200    False Positive:    840
+  False Negative:   1880    True Positive:   17700
+
+Top 10 Features (Average Importance):
+   1. cap-shape_b                    0.000000
+   2. cap-shape_c                    0.000000
+   3. cap-shape_f                    0.000000
+   4. cap-shape_k                    0.000000
+   5. cap-shape_s                    0.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Naive Bayes (KS - inCV):
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.894633 ± 0.009586
+  F1: 0.877150 ± 0.012573
+  AUC-ROC: 0.968532 ± 0.006207
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.781404 ± 0.019939
+  MCC: 0.805889 ± 0.016466
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:   4280    True Positive:   15300
+
+Top 10 Features (Average Importance):
+   1. cap-shape_b                    0.000000
+   2. cap-shape_c                    0.000000
+   3. cap-shape_f                    0.000000
+   4. cap-shape_k                    0.000000
+   5. cap-shape_s                    0.000000
+   6. cap-shape_x                    0.000000
+   7. cap-surface_f                  0.000000
+   8. cap-surface_g                  0.000000
+   9. cap-surface_s                  0.000000
+  10. cap-surface_y                  0.000000
+
+================================================================================
+
+Integrated-SelectFromModel (L1-LR selector) + LR:
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 1.000000 ± 0.000000
+  F1: 1.000000 ± 0.000000
+  AUC-ROC: 1.000000 ± 0.000000
+  Precision: 1.000000 ± 0.000000
+  Recall: 1.000000 ± 0.000000
+  MCC: 1.000000 ± 0.000000
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:      0    True Positive:   19580
+
+Top 10 Features (Average Importance):
+   1. odor_n                         4.055675
+   2. odor_l                         1.778559
+   3. odor_a                         1.778525
+   4. odor_f                         1.198709
+   5. spore-print-color_r            0.985221
+   6. gill-size_b                    0.735839
+   7. gill-size_n                    0.735839
+   8. stalk-surface-above-ring_k     0.724833
+   9. stalk-surface-below-ring_y     0.449187
+  10. stalk-color-below-ring_y       0.145189
+
+================================================================================
+
+Integrated-SelectFromModel (L1-LR selector) + SVM:
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.999138 ± 0.000961
+  F1: 0.999104 ± 0.001000
+  AUC-ROC: 1.000000 ± 0.000000
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.998212 ± 0.001995
+  MCC: 0.998277 ± 0.001921
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:     35    True Positive:   19545
+
+Top 10 Features (Average Importance):
+   1. odor_n                         4.055675
+   2. odor_l                         1.778559
+   3. odor_a                         1.778525
+   4. odor_f                         1.198709
+   5. spore-print-color_r            0.985221
+   6. gill-size_b                    0.735839
+   7. gill-size_n                    0.735839
+   8. stalk-surface-above-ring_k     0.724833
+   9. stalk-surface-below-ring_y     0.449187
+  10. stalk-color-below-ring_y       0.145189
+
+================================================================================
+
+Integrated-SelectFromModel (L1-LR selector) + KNN:
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.999015 ± 0.001101
+  F1: 0.998976 ± 0.001145
+  AUC-ROC: 0.999999 ± 0.000003
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.997957 ± 0.002284
+  MCC: 0.998032 ± 0.002199
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:     40    True Positive:   19540
+
+Top 10 Features (Average Importance):
+   1. odor_n                         4.055675
+   2. odor_l                         1.778559
+   3. odor_a                         1.778525
+   4. odor_f                         1.198709
+   5. spore-print-color_r            0.985221
+   6. gill-size_b                    0.735839
+   7. gill-size_n                    0.735839
+   8. stalk-surface-above-ring_k     0.724833
+   9. stalk-surface-below-ring_y     0.449187
+  10. stalk-color-below-ring_y       0.145189
+
+================================================================================
+
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes:
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.953373 ± 0.007349
+  F1: 0.953883 ± 0.006956
+  AUC-ROC: 0.994489 ± 0.002535
+  Precision: 0.912552 ± 0.012632
+  Recall: 0.999234 ± 0.001277
+  MCC: 0.910847 ± 0.013507
+
+Confusion Matrix (Aggregated):
+  True Negative:   19161    False Positive:   1879
+  False Negative:     15    True Positive:   19565
+
+Top 10 Features (Average Importance):
+   1. odor_n                         4.055675
+   2. odor_l                         1.778559
+   3. odor_a                         1.778525
+   4. odor_f                         1.198709
+   5. spore-print-color_r            0.985221
+   6. gill-size_b                    0.735839
+   7. gill-size_n                    0.735839
+   8. stalk-surface-above-ring_k     0.724833
+   9. stalk-surface-below-ring_y     0.449187
+  10. stalk-color-below-ring_y       0.145189
+
+================================================================================
+
+Integrated-SelectFromModel (RF selector) + RF:
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 1.000000 ± 0.000000
+  F1: 1.000000 ± 0.000000
+  AUC-ROC: 1.000000 ± 0.000000
+  Precision: 1.000000 ± 0.000000
+  Recall: 1.000000 ± 0.000000
+  MCC: 1.000000 ± 0.000000
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:      0    True Positive:   19580
+
+Top 10 Features (Average Importance):
+   1. stalk-root_c                   0.068663
+   2. stalk-surface-below-ring_y     0.056776
+   3. habitat_p                      0.048962
+   4. stalk-root_e                   0.048367
+   5. stalk-color-above-ring_w       0.047420
+   6. stalk-shape_t                  0.044570
+   7. stalk-surface-below-ring_s     0.038842
+   8. stalk-root_?                   0.027360
+   9. stalk-root_b                   0.026603
+  10. gill-color_b                   0.024525
+
+================================================================================
+
+Integrated-SelectFromModel (RF selector) + LR:
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 1.000000 ± 0.000000
+  F1: 1.000000 ± 0.000000
+  AUC-ROC: 1.000000 ± 0.000000
+  Precision: 1.000000 ± 0.000000
+  Recall: 1.000000 ± 0.000000
+  MCC: 1.000000 ± 0.000000
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:      0    True Positive:   19580
+
+Top 10 Features (Average Importance):
+   1. stalk-root_c                   0.068663
+   2. stalk-surface-below-ring_y     0.056776
+   3. habitat_p                      0.048962
+   4. stalk-root_e                   0.048367
+   5. stalk-color-above-ring_w       0.047420
+   6. stalk-shape_t                  0.044570
+   7. stalk-surface-below-ring_s     0.038842
+   8. stalk-root_?                   0.027360
+   9. stalk-root_b                   0.026603
+  10. gill-color_b                   0.024525
+
+================================================================================
+
+Integrated-SelectFromModel (RF selector) + KNN:
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.999015 ± 0.001101
+  F1: 0.998976 ± 0.001145
+  AUC-ROC: 1.000000 ± 0.000000
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.997957 ± 0.002284
+  MCC: 0.998032 ± 0.002199
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:     40    True Positive:   19540
+
+Top 10 Features (Average Importance):
+   1. stalk-root_c                   0.068663
+   2. stalk-surface-below-ring_y     0.056776
+   3. habitat_p                      0.048962
+   4. stalk-root_e                   0.048367
+   5. stalk-color-above-ring_w       0.047420
+   6. stalk-shape_t                  0.044570
+   7. stalk-surface-below-ring_s     0.038842
+   8. stalk-root_?                   0.027360
+   9. stalk-root_b                   0.026603
+  10. gill-color_b                   0.024525
+
+================================================================================
+
+Integrated-RFECV (L1-LR) + LR:
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.999508 ± 0.000985
+  F1: 0.999488 ± 0.001024
+  AUC-ROC: 0.999999 ± 0.000006
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.998979 ± 0.002042
+  MCC: 0.999016 ± 0.001966
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:     20    True Positive:   19560
+
+Top 10 Features (Average Importance):
+   1. odor_n                         1.101129
+   2. odor_f                         1.026810
+   3. spore-print-color_h            0.998132
+   4. spore-print-color_r            0.989560
+   5. gill-size_n                    0.972873
+   6. gill-size_b                    0.972873
+   7. odor_l                         0.968261
+   8. odor_a                         0.967844
+   9. stalk-surface-above-ring_k     0.956957
+  10. spore-print-color_n            0.956697
+
+================================================================================
+
+Integrated-RFECV (L1-LR) + KNN:
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.999065 ± 0.001089
+  F1: 0.999027 ± 0.001132
+  AUC-ROC: 0.999999 ± 0.000006
+  Precision: 1.000000 ± 0.000000
+  Recall: 0.998059 ± 0.002258
+  MCC: 0.998130 ± 0.002175
+
+Confusion Matrix (Aggregated):
+  True Negative:   21040    False Positive:      0
+  False Negative:     38    True Positive:   19542
+
+Top 10 Features (Average Importance):
+   1. odor_n                         1.101129
+   2. odor_f                         1.026810
+   3. spore-print-color_h            0.998132
+   4. spore-print-color_r            0.989560
+   5. gill-size_n                    0.972873
+   6. gill-size_b                    0.972873
+   7. odor_l                         0.968261
+   8. odor_a                         0.967844
+   9. stalk-surface-above-ring_k     0.956957
+  10. spore-print-color_n            0.956697
+
+================================================================================
+
+Integrated-RFECV (L1-LR) + Naive Bayes:
+----------------------------------------
+Total CV iterations: 50
+
+Performance Metrics:
+  Accuracy: 0.981069 ± 0.029527
+  F1: 0.981419 ± 0.027045
+  AUC-ROC: 0.996898 ± 0.003415
+  Precision: 0.977001 ± 0.052803
+  Recall: 0.987742 ± 0.009052
+  MCC: 0.964160 ± 0.052947
+
+Confusion Matrix (Aggregated):
+  True Negative:   20511    False Positive:    529
+  False Negative:    240    True Positive:   19340
+
+Top 10 Features (Average Importance):
+   1. odor_n                         1.101129
+   2. odor_f                         1.026810
+   3. spore-print-color_h            0.998132
+   4. spore-print-color_r            0.989560
+   5. gill-size_n                    0.972873
+   6. gill-size_b                    0.972873
+   7. odor_l                         0.968261
+   8. odor_a                         0.967844
+   9. stalk-surface-above-ring_k     0.956957
+  10. spore-print-color_n            0.956697
+
+================================================================================
+
+CLASSIFIER COMPARISON SUMMARY:
+================================================================================
+Classifier           Accuracy     F1-Score     Precision    Recall       AUC-ROC     
+--------------------------------------------------------------------------------
+Random Forest (All)  1.0000       1.0000       1.0000       1.0000       1.0000      
+Logistic Regression (All) 0.9995       0.9995       1.0000       0.9990       1.0000      
+SVM (All)            0.9991       0.9991       1.0000       0.9982       1.0000      
+K-Neighbors (All)    0.9990       0.9990       1.0000       0.9980       1.0000      
+Decision Tree (All)  0.9987       0.9986       0.9985       0.9988       0.9990      
+Naive Bayes (All)    0.9534       0.9539       0.9126       0.9992       0.9945      
+Random Forest (MW - inCV) 0.9340       0.9265       1.0000       0.8631       0.9784      
+Random Forest (Wilcoxon - inCV) 0.9340       0.9265       1.0000       0.8631       0.9784      
+Random Forest (Kruskal - inCV) 0.9506       0.9456       0.9887       0.9089       0.9831      
+Random Forest (Chi-square - inCV) 0.9419       0.9374       0.9737       0.9040       0.9796      
+Random Forest (KS - inCV) 0.9340       0.9265       1.0000       0.8631       0.9784      
+Logistic Regression (MW - inCV) 0.9301       0.9218       1.0000       0.8551       0.9732      
+Logistic Regression (Wilcoxon - inCV) 0.9301       0.9218       1.0000       0.8551       0.9732      
+Logistic Regression (Kruskal - inCV) 0.9490       0.9437       0.9887       0.9056       0.9784      
+Logistic Regression (Chi-square - inCV) 0.9419       0.9374       0.9737       0.9040       0.9755      
+Logistic Regression (KS - inCV) 0.9301       0.9218       1.0000       0.8551       0.9732      
+SVM (MW - inCV)      0.9340       0.9265       1.0000       0.8631       0.9504      
+SVM (Wilcoxon - inCV) 0.9340       0.9265       1.0000       0.8631       0.9504      
+SVM (Kruskal - inCV) 0.9506       0.9456       0.9887       0.9089       0.9658      
+SVM (Chi-square - inCV) 0.9419       0.9374       0.9737       0.9040       0.9623      
+SVM (KS - inCV)      0.9340       0.9265       1.0000       0.8631       0.9504      
+K-Neighbors (MW - inCV) 0.9340       0.9265       1.0000       0.8631       0.9758      
+K-Neighbors (Wilcoxon - inCV) 0.9340       0.9265       1.0000       0.8631       0.9758      
+K-Neighbors (Kruskal - inCV) 0.9488       0.9435       0.9879       0.9057       0.9796      
+K-Neighbors (Chi-square - inCV) 0.9388       0.9335       0.9751       0.8963       0.9490      
+K-Neighbors (KS - inCV) 0.9340       0.9265       1.0000       0.8631       0.9758      
+Decision Tree (MW - inCV) 0.9340       0.9265       1.0000       0.8631       0.9784      
+Decision Tree (Wilcoxon - inCV) 0.9340       0.9265       1.0000       0.8631       0.9784      
+Decision Tree (Kruskal - inCV) 0.9506       0.9456       0.9887       0.9089       0.9831      
+Decision Tree (Chi-square - inCV) 0.9419       0.9374       0.9737       0.9040       0.9796      
+Decision Tree (KS - inCV) 0.9340       0.9265       1.0000       0.8631       0.9784      
+Naive Bayes (MW - inCV) 0.8946       0.8771       1.0000       0.7814       0.9685      
+Naive Bayes (Wilcoxon - inCV) 0.8946       0.8771       1.0000       0.7814       0.9685      
+Naive Bayes (Kruskal - inCV) 0.8967       0.8798       1.0000       0.7857       0.9742      
+Naive Bayes (Chi-square - inCV) 0.9330       0.9286       0.9548       0.9040       0.9726      
+Naive Bayes (KS - inCV) 0.8946       0.8771       1.0000       0.7814       0.9685      
+Integrated-SelectFromModel (L1-LR selector) + LR 1.0000       1.0000       1.0000       1.0000       1.0000      
+Integrated-SelectFromModel (L1-LR selector) + SVM 0.9991       0.9991       1.0000       0.9982       1.0000      
+Integrated-SelectFromModel (L1-LR selector) + KNN 0.9990       0.9990       1.0000       0.9980       1.0000      
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes 0.9534       0.9539       0.9126       0.9992       0.9945      
+Integrated-SelectFromModel (RF selector) + RF 1.0000       1.0000       1.0000       1.0000       1.0000      
+Integrated-SelectFromModel (RF selector) + LR 1.0000       1.0000       1.0000       1.0000       1.0000      
+Integrated-SelectFromModel (RF selector) + KNN 0.9990       0.9990       1.0000       0.9980       1.0000      
+Integrated-RFECV (L1-LR) + LR 0.9995       0.9995       1.0000       0.9990       1.0000      
+Integrated-RFECV (L1-LR) + KNN 0.9991       0.9990       1.0000       0.9981       1.0000      
+Integrated-RFECV (L1-LR) + Naive Bayes 0.9811       0.9814       0.9770       0.9877       0.9969      
+
+================================================================================
+
+FEATURE IMPORTANCE SUMMARY:
+--------------------------------------------------
+
+Random Forest (All) - Top 10 Features:
+  odor_n: 6.967107
+  odor_f: 3.864151
+  gill-size_n: 3.259642
+  gill-size_b: 2.675737
+  stalk-surface-below-ring_k: 2.595179
+  stalk-surface-above-ring_k: 2.273845
+  gill-color_b: 2.151723
+  spore-print-color_h: 1.880729
+  ring-type_p: 1.509854
+  bruises_f: 1.351785
+
+Logistic Regression (All) - Top 10 Features:
+  odor_n: 202.783742
+  odor_l: 88.927938
+  odor_a: 88.926246
+  odor_f: 59.935465
+  spore-print-color_r: 49.261070
+  gill-size_b: 36.791937
+  gill-size_n: 36.791937
+  stalk-surface-above-ring_k: 36.241674
+  stalk-surface-below-ring_y: 22.459331
+  stalk-color-below-ring_y: 7.259431
+
+SVM (All) - Top 10 Features:
+  population_v: 12.501156
+  ring-type_p: 12.494861
+  stalk-root_b: 12.439611
+  stalk-color-below-ring_w: 12.422984
+  stalk-color-above-ring_w: 12.379124
+  cap-shape_x: 12.376661
+  odor_n: 12.285611
+  stalk-shape_e: 12.275717
+  stalk-shape_t: 12.275717
+  bruises_f: 12.145033
+
+K-Neighbors (All) - Top 10 Features:
+  population_v: 12.501156
+  ring-type_p: 12.494861
+  stalk-root_b: 12.439611
+  stalk-color-below-ring_w: 12.422984
+  stalk-color-above-ring_w: 12.379124
+  cap-shape_x: 12.376661
+  odor_n: 12.285611
+  stalk-shape_e: 12.275717
+  stalk-shape_t: 12.275717
+  bruises_f: 12.145033
+
+Decision Tree (All) - Top 10 Features:
+  odor_n: 30.958022
+  stalk-root_c: 8.893917
+  stalk-surface-below-ring_y: 4.979356
+  spore-print-color_r: 1.696276
+  odor_a: 0.977477
+  odor_l: 0.909034
+  population_c: 0.781547
+  spore-print-color_u: 0.195002
+  gill-size_n: 0.105271
+  gill-size_b: 0.103323
+
+Naive Bayes (All) - Top 10 Features:
+  population_v: 12.501156
+  ring-type_p: 12.494861
+  stalk-root_b: 12.439611
+  stalk-color-below-ring_w: 12.422984
+  stalk-color-above-ring_w: 12.379124
+  cap-shape_x: 12.376661
+  odor_n: 12.285611
+  stalk-shape_e: 12.275717
+  stalk-shape_t: 12.275717
+  bruises_f: 12.145033
+
+Random Forest (MW - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+Random Forest (Wilcoxon - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+Random Forest (Kruskal - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 25.000000
+  gill-size_b: 19.000000
+  gill-size_n: 3.000000
+  gill-color_b: 3.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+
+Random Forest (Chi-square - inCV) - Top 10 Features:
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  gill-size_b: 49.000000
+  ring-type_p: 27.000000
+  gill-size_n: 24.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+
+Random Forest (KS - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+Logistic Regression (MW - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+Logistic Regression (Wilcoxon - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+Logistic Regression (Kruskal - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 25.000000
+  gill-size_b: 19.000000
+  gill-size_n: 3.000000
+  gill-color_b: 3.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+
+Logistic Regression (Chi-square - inCV) - Top 10 Features:
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  gill-size_b: 49.000000
+  ring-type_p: 27.000000
+  gill-size_n: 24.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+
+Logistic Regression (KS - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+SVM (MW - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+SVM (Wilcoxon - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+SVM (Kruskal - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 25.000000
+  gill-size_b: 19.000000
+  gill-size_n: 3.000000
+  gill-color_b: 3.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+
+SVM (Chi-square - inCV) - Top 10 Features:
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  gill-size_b: 49.000000
+  ring-type_p: 27.000000
+  gill-size_n: 24.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+
+SVM (KS - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+K-Neighbors (MW - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+K-Neighbors (Wilcoxon - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+K-Neighbors (Kruskal - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 25.000000
+  gill-size_b: 19.000000
+  gill-size_n: 3.000000
+  gill-color_b: 3.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+
+K-Neighbors (Chi-square - inCV) - Top 10 Features:
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  gill-size_b: 49.000000
+  ring-type_p: 27.000000
+  gill-size_n: 24.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+
+K-Neighbors (KS - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+Decision Tree (MW - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+Decision Tree (Wilcoxon - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+Decision Tree (Kruskal - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 25.000000
+  gill-size_b: 19.000000
+  gill-size_n: 3.000000
+  gill-color_b: 3.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+
+Decision Tree (Chi-square - inCV) - Top 10 Features:
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  gill-size_b: 49.000000
+  ring-type_p: 27.000000
+  gill-size_n: 24.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+
+Decision Tree (KS - inCV) - Top 10 Features:
+  odor_f: 50.000000
+  odor_n: 50.000000
+  stalk-surface-above-ring_k: 50.000000
+  stalk-surface-below-ring_k: 50.000000
+  ring-type_p: 50.000000
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+
+Naive Bayes (MW - inCV) - Top 10 Features:
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+  cap-shape_x: 0.000000
+  cap-surface_f: 0.000000
+  cap-surface_g: 0.000000
+  cap-surface_s: 0.000000
+  cap-surface_y: 0.000000
+
+Naive Bayes (Wilcoxon - inCV) - Top 10 Features:
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+  cap-shape_x: 0.000000
+  cap-surface_f: 0.000000
+  cap-surface_g: 0.000000
+  cap-surface_s: 0.000000
+  cap-surface_y: 0.000000
+
+Naive Bayes (Kruskal - inCV) - Top 10 Features:
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+  cap-shape_x: 0.000000
+  cap-surface_f: 0.000000
+  cap-surface_g: 0.000000
+  cap-surface_s: 0.000000
+  cap-surface_y: 0.000000
+
+Naive Bayes (Chi-square - inCV) - Top 10 Features:
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+  cap-shape_x: 0.000000
+  cap-surface_f: 0.000000
+  cap-surface_g: 0.000000
+  cap-surface_s: 0.000000
+  cap-surface_y: 0.000000
+
+Naive Bayes (KS - inCV) - Top 10 Features:
+  cap-shape_b: 0.000000
+  cap-shape_c: 0.000000
+  cap-shape_f: 0.000000
+  cap-shape_k: 0.000000
+  cap-shape_s: 0.000000
+  cap-shape_x: 0.000000
+  cap-surface_f: 0.000000
+  cap-surface_g: 0.000000
+  cap-surface_s: 0.000000
+  cap-surface_y: 0.000000
+
+Integrated-SelectFromModel (L1-LR selector) + LR - Top 10 Features:
+  odor_n: 202.783742
+  odor_l: 88.927938
+  odor_a: 88.926246
+  odor_f: 59.935465
+  spore-print-color_r: 49.261070
+  gill-size_b: 36.791937
+  gill-size_n: 36.791937
+  stalk-surface-above-ring_k: 36.241674
+  stalk-surface-below-ring_y: 22.459331
+  stalk-color-below-ring_y: 7.259431
+
+Integrated-SelectFromModel (L1-LR selector) + SVM - Top 10 Features:
+  odor_n: 202.783742
+  odor_l: 88.927938
+  odor_a: 88.926246
+  odor_f: 59.935465
+  spore-print-color_r: 49.261070
+  gill-size_b: 36.791937
+  gill-size_n: 36.791937
+  stalk-surface-above-ring_k: 36.241674
+  stalk-surface-below-ring_y: 22.459331
+  stalk-color-below-ring_y: 7.259431
+
+Integrated-SelectFromModel (L1-LR selector) + KNN - Top 10 Features:
+  odor_n: 202.783742
+  odor_l: 88.927938
+  odor_a: 88.926246
+  odor_f: 59.935465
+  spore-print-color_r: 49.261070
+  gill-size_b: 36.791937
+  gill-size_n: 36.791937
+  stalk-surface-above-ring_k: 36.241674
+  stalk-surface-below-ring_y: 22.459331
+  stalk-color-below-ring_y: 7.259431
+
+Integrated-SelectFromModel (L1-LR selector) + Naive Bayes - Top 10 Features:
+  odor_n: 202.783742
+  odor_l: 88.927938
+  odor_a: 88.926246
+  odor_f: 59.935465
+  spore-print-color_r: 49.261070
+  gill-size_b: 36.791937
+  gill-size_n: 36.791937
+  stalk-surface-above-ring_k: 36.241674
+  stalk-surface-below-ring_y: 22.459331
+  stalk-color-below-ring_y: 7.259431
+
+Integrated-SelectFromModel (RF selector) + RF - Top 10 Features:
+  stalk-root_c: 3.433135
+  stalk-surface-below-ring_y: 2.838782
+  habitat_p: 2.448121
+  stalk-root_e: 2.418346
+  stalk-color-above-ring_w: 2.371003
+  stalk-shape_t: 2.228521
+  stalk-surface-below-ring_s: 1.942104
+  stalk-root_?: 1.368023
+  stalk-root_b: 1.330143
+  gill-color_b: 1.226272
+
+Integrated-SelectFromModel (RF selector) + LR - Top 10 Features:
+  stalk-root_c: 3.433135
+  stalk-surface-below-ring_y: 2.838782
+  habitat_p: 2.448121
+  stalk-root_e: 2.418346
+  stalk-color-above-ring_w: 2.371003
+  stalk-shape_t: 2.228521
+  stalk-surface-below-ring_s: 1.942104
+  stalk-root_?: 1.368023
+  stalk-root_b: 1.330143
+  gill-color_b: 1.226272
+
+Integrated-SelectFromModel (RF selector) + KNN - Top 10 Features:
+  stalk-root_c: 3.433135
+  stalk-surface-below-ring_y: 2.838782
+  habitat_p: 2.448121
+  stalk-root_e: 2.418346
+  stalk-color-above-ring_w: 2.371003
+  stalk-shape_t: 2.228521
+  stalk-surface-below-ring_s: 1.942104
+  stalk-root_?: 1.368023
+  stalk-root_b: 1.330143
+  gill-color_b: 1.226272
+
+Integrated-RFECV (L1-LR) + LR - Top 10 Features:
+  odor_n: 55.056446
+  odor_f: 51.340504
+  spore-print-color_h: 49.906600
+  spore-print-color_r: 49.477978
+  gill-size_b: 48.643659
+  gill-size_n: 48.643659
+  odor_l: 48.413058
+  odor_a: 48.392194
+  stalk-surface-above-ring_k: 47.847834
+  spore-print-color_n: 47.834862
+
+Integrated-RFECV (L1-LR) + KNN - Top 10 Features:
+  odor_n: 55.056446
+  odor_f: 51.340504
+  spore-print-color_h: 49.906600
+  spore-print-color_r: 49.477978
+  gill-size_b: 48.643659
+  gill-size_n: 48.643659
+  odor_l: 48.413058
+  odor_a: 48.392194
+  stalk-surface-above-ring_k: 47.847834
+  spore-print-color_n: 47.834862
+
+Integrated-RFECV (L1-LR) + Naive Bayes - Top 10 Features:
+  odor_n: 55.056446
+  odor_f: 51.340504
+  spore-print-color_h: 49.906600
+  spore-print-color_r: 49.477978
+  gill-size_b: 48.643659
+  gill-size_n: 48.643659
+  odor_l: 48.413058
+  odor_a: 48.392194
+  stalk-surface-above-ring_k: 47.847834
+  spore-print-color_n: 47.834862
+
+Detailed results saved to: feature_selection_results_mushrooms.csv_20251222_015532.txt
